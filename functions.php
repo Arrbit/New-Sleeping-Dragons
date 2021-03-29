@@ -6,8 +6,7 @@ function enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'enqueue_styles');
 
 wp_enqueue_script(
-    'bootstrap',
-    get_template_directory_uri() . '/js/bootstrap.min.js',
+    'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', 
     array( 'jquery' ),
 );
 

@@ -5,8 +5,6 @@
  * Template Name: Frontpage
  */?>
 <?php get_header();?>
-<div class="ugly">
-</div>
 frontpage bla bla
 <?php get_footer();?>
 

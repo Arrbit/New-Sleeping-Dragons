@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <footer>
     <div class="p-2 d-flex" style="background-color: rgba(0, 0, 0, 0.2);">
         <div class="flex-fill justify-content-start align-self-center">
@@ -37,6 +36,3 @@ a:hover {
     text-decoration: none;
 }
 </style>
-=======
-footer 123
->>>>>>> fb959a9682de89f3bd1ae310d6ddca56d63e0619

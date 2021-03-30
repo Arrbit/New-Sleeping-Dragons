@@ -6,22 +6,28 @@
 <?php wp_head(); ?>
 </head>
 
-<!-- This container class will be closed in the footer :) -->
-<div class="container">
-
 <header>
-    <div class="p-2 d-flex" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="p-2 d-flex" style="background-color: rgba(0, 0, 0, 0);">
     
-        <div class="justify-content-start align-self-center color--black-accent">
+        <div class="flex-fill justify-content-start align-self-center color--black-accent">
             <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("header") ) : endif; ?>
         </div>
-
-        <div class="flex-fill justify-content-end align-self-center float-right">
+       
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png"
+            width="100px"
+            height="100px"
+            class="rounded img-fluid float-start"
+            alt="SDS-Logo">
+       
+        <div class="justify-content-end align-self-center color--black-accent">
             <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
         </div>
 
     </div>
 </header>
+
+<!-- This container class will be closed in the footer :) -->
+<div class="container">
 
 <style>
 #menu-header{

@@ -6,4 +6,5 @@
 <?php wp_head(); ?>
 </head>
 
-header bla bla
+<!-- This container class will be closed in the footer :) -->
+<div class="container">

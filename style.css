@@ -1,6 +1,11 @@
+@charset "UTF-8";
 /*
- * Theme Name: New Sleeping Dragons
- */
+Theme Name: New Sleeping Dragons
+Author: Jasar and Laila
+Author URI: https://sleepingdragons.eu/members
+Description: This is the new Version of the old SDS Theme which has a less dark and modernized look. Including more options to customize via the frontend.
+Version: 0.1
+*/
 
  a{
     color: #8A0707 !important;

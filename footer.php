@@ -1,3 +1,6 @@
+</div>
+<!--closing of the container -->
+
 <footer>
     <div class="p-2 d-flex" style="background-color: rgba(0, 0, 0, 0.2);">
         <div class="flex-fill justify-content-start align-self-center">
@@ -9,6 +12,7 @@
         </div>
     </div>
 </footer>
+<?php wp_footer();?>
 
 <style>
 #menu-footer{

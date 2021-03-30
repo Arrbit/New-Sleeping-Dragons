@@ -5,7 +5,6 @@
  * Template Name: Frontpage
  */?>
 <?php get_header();?>
-frontpage bla bla
+frontpage
 <?php get_footer();?>
 
-<?php wp_footer();?>

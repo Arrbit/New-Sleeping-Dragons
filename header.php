@@ -6,23 +6,20 @@
 <?php wp_head(); ?>
 </head>
 
-<header>
-    <div class="p-2 d-flex" style="background-color: rgba(0, 0, 0, 0);">
-    
-        <div class="flex-fill justify-content-start align-self-center color--black-accent">
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("header") ) : endif; ?>
-        </div>
-       
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png"
-            width="100px"
-            height="100px"
-            class="rounded img-fluid float-start"
-            alt="SDS-Logo">
-       
-        <div class="justify-content-end align-self-center color--black-accent">
-            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-        </div>
 
+<header class="wrap">
+    <div class="links">
+    <div class="flexi color--black-accent">
+    <?php echo get_bloginfo()?>
+    </div>
+
+    <div class="flexi color--black-accent">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png"
+            class="logo" alt="SDS-Logo">
+    </div>
+
+    <div class="flexi color--black-accent">
+        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
     </div>
 </header>
 
@@ -30,19 +27,27 @@
 <div class="container">
 
 <style>
-#menu-header{
+#menu-header-menu{
     margin-top: auto;
     margin-bottom: auto;
 }
-#menu-header > li {
-list-style:none;
-display: inline;
-padding-right:20px;
+#menu-header-menu > li {
+    list-style:none;
+    display: inline;
+    padding-right:20px;
+}
+
+.flexi{
+    flex: 1 1 0px;
+}
+
+.logo{
+    width:auto;
+    height:110px;
 }
 
 .color--black-accent{
     color: #3e3e3e;
-
 }
 
 a {
@@ -54,4 +59,27 @@ a:hover {
     color: black;
     text-decoration: none;
 }
+
+.wrap {
+  text-align: center;
+  margin: 20px;
+  position: relative;
+}
+.links {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.wrap:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid black;
+  background: black;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
 </style>

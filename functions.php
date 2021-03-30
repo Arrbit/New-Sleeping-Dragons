@@ -46,4 +46,49 @@ function widget_init() {
 
     }
     add_action( 'widgets_init', 'widget_init' );
+
+
+// Our custom post type function
+function create_posttype() {
+    register_post_type( 'letters',
+        array(
+            'labels' => array(
+                'name' => __( 'Letters' ),
+                'singular_name' => __( 'Letter' )
+            ),
+            'rewrite' => array('slug' => 'letter'),
+            'public' => true,
+            'hierarchical' => true,
+            'has_archive' => true,
+            'show_in_rest' => true,
+            'publicly_queryable' => true
+        )
+    );
+    register_post_type( 'members',
+        array(
+            'labels' => array(
+                'name' => __( 'Members' ),
+                'singular_name' => __( 'Member' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'members'),
+            'show_in_rest' => true,
+        )
+    );
+    register_post_type( 'events',
+        array(
+            'labels' => array(
+                'name' => __( 'Events' ),
+                'singular_name' => __( 'Event' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'events'),
+            'show_in_rest' => true,
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
 ?>

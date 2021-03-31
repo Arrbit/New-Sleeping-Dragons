@@ -24,7 +24,6 @@
 
     <div class="testSquare"></div>
 
-<div id="pusher"></div>
 
 <?php get_footer();?>
 
@@ -51,12 +50,6 @@
         color:white;
         background-color:black;
         
-    }
-
-    #pusher {
-        width: 100vw;
-        height: calc(100vh - 40px);
-        overflow: hidden;
     }
 
 </style>

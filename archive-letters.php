@@ -94,7 +94,6 @@ img {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-
 .card_img img{
     height:auto;
     width: 100%;
@@ -103,7 +102,7 @@ img {
 .card_img{
     width: 100%;
     margin: auto;
-    }
+}
 
 .card_content{
     padding:10px;
@@ -113,15 +112,14 @@ img {
 @media (min-width: 768px) { 
     .archive_title{
     margin-left: -20px;
-}
-
+    }
 
     .card_img{
     width: 50%;
     margin: auto;
     }
 
-.card_content{
+    .card_content{
     padding-left: 20px;
     width: 50%;
     line-height: 2em;

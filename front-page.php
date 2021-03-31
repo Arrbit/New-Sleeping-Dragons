@@ -27,13 +27,15 @@
 
 <?php get_footer();?>
 <script>
+var el = jQuery(".greyTriangle");
+var w = screen.width / 4 | 0; // calculate & trim decimals
+el.css("border-width", "575px " + w + "px " + "575px 0 "); 
 
-jQuery(window).resize(function() {
-    var el = jQuery(".greyTriangle");
-    var w = el.width() / 4 | 0; // calculate & trim decimals
+window.addEventListener('resize', change);
+function change(){
+    var w = screen.width / 4 | 0; // calculate & trim decimals
     el.css("border-width", "575px " + w + "px " + "575px 0 ");
-  });
-
+};
 </script>
 
 <style>

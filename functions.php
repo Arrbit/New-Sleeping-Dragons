@@ -1,6 +1,7 @@
 <?php
 #Load Styles (Order Matters :))
 function enqueue_styles() {
+    wp_enqueue_style('Style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('frontpage', get_template_directory_uri() . '/css/frontpage.css');
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
 }

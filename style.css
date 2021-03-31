@@ -8,14 +8,13 @@ Version: 0.1
 */
 
 @font-face {
-   font-family: 'Righteous';
-   font-style: normal;
-   font-weight: 400;
+   font-family: Righteous;
    src: local('Righteous'), local('Righteous-Regular'),
        url('./assets/fonts/Righteous_Regular/righteous-v8-latin-regular.woff2') format('woff2'),
        url('./assets/fonts/Righteous_Regular/righteous-v8-latin-regular.woff') format('woff');
 }
 
- a{
-    color: #8A0707 !important;
- }
+.font--righteous
+{
+    font-family: Righteous;
+}

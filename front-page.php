@@ -22,10 +22,19 @@
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_Transparent.png" class="frontpage-logo position-absolute" alt="SDS-Logo">
     </div>
 
-    <div class="testSquare"></div>
+    <div class="greyTriangle"></div>
 
 
 <?php get_footer();?>
+<script>
+
+jQuery(window).resize(function() {
+    var el = jQuery(".greyTriangle");
+    var w = el.width() / 4 | 0; // calculate & trim decimals
+    el.css("border-width", "575px " + w + "px " + "575px 0 ");
+  });
+
+</script>
 
 <style>
 
@@ -38,18 +47,46 @@
     }
 
     #background-container {
-        width: 100%;
-        height: 100%;
+        max-width: 100vw;
+        height: 100vh;
         position: relative;
         /* test color */
-        background-color: red;
+        background-color: grey;
     }
-    .testSquare {
-        width:100px;
-        height:100px;
-        color:white;
-        background-color:black;
-        
+    .greyTriangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 575px 1400px 575px 0;
+        border-color: transparent #D0D0D0 transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: -50px;
+    }
+
+    .redTriangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 575px 1400px 575px 0;
+        border-color: transparent #D0D0D0 transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: -50px;
+    }
+
+    .blackTriangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 575px 1400px 575px 0;
+        border-color: transparent #D0D0D0 transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: -50px;
     }
 
 </style>

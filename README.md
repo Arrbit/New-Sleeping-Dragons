@@ -5,9 +5,18 @@ The old code was written a bit less like wordpress likes (a lot of requires, nam
 
 Using [Bootstrap 5 as helpers](https://getbootstrap.com/) for mobile and more i guess!
 
-# Recommended Plugins
+### Recommended Plugins
 - [WP Featherlight](https://wordpress.org/plugins/wp-featherlight/)
-- WIP
+
+#### Pugins for Events
+- Contact Form 7
+- Post My CF7 Form
+- CF7 to Webhook
+
+#### Setting up the Event-Type
+WIP
+
+
 
 # Major Changes
 Added a proper lightbox thanks to **WP Featherlight**, to display all your screenshots in bigger happiness.

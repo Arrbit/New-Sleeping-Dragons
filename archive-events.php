@@ -2,7 +2,7 @@
 /**
  * Lists all Events
  * Theme Name: New Sleeping Dragons
- * Template Name: Lists all Events
+ * Template Name: Lists all Form_Events
  */?>
  <?php get_header();?>
 <div class="archive_title flex-row d-flex">
@@ -14,7 +14,7 @@
 <div class="card_collection">
 <?php 
         $wpb_all_query = new WP_Query(array(
-        'post_type'=>'events',
+        'post_type'=>'form_events',
         'post_status'=>'publish',
         'posts_per_page'=>5));?>
         <?php if ( $wpb_all_query->have_posts() ) : ?>
@@ -34,9 +34,12 @@
                     
                 <div class="card_content">
                     <div class="card_title font--righteous">
-                            <?php the_title(); ?>
+                            <?php the_title(); ?>        
                     </div>
-                    <?php echo get_the_excerpt(); ?>
+                    <div class="card_time">
+                        <?php echo get_post_meta(get_the_ID(), 'time', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'timemm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d/m/Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
+                    </div>
+                        <?php echo get_the_excerpt(); ?>
                 </div>
             </div>
             </a>
@@ -52,6 +55,10 @@
 <?php get_footer();?>
 
 <style>
+.card_time{
+    margin-bottom: 1em;
+
+}
 .card_collection{
     padding-bottom:10px;
 }
@@ -70,7 +77,6 @@
     font-size: 1.5em;
     width: fit-content;
     padding-right: 10%;
-    margin-bottom: 1em;
     border-bottom: solid 3px #8A0707;
 }
 

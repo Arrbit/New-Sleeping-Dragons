@@ -78,19 +78,8 @@ function create_posttype() {
             'show_in_rest' => true,
         )
     );
-    register_post_type( 'events',
-        array(
-            'labels' => array(
-                'name' => __( 'Events' ),
-                'singular_name' => __( 'Event' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'events'),
-            'show_in_rest' => true,
-        )
-    );
 }
-// Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
+
+
 ?>

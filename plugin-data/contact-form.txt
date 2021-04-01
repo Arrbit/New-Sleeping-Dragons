@@ -1,0 +1,28 @@
+<div id="event_form">
+<label> Your Name (required) </label>
+    [text* your-name] 
+
+<label> Your Event Name (required) </label>
+    [text* event] 
+
+<label> Event Date (required) </label>
+    [date* date] 
+
+<label>Time of your event in HH:MM (required) </label>
+    [number* hh min:0000 max:23 "19"] : [number* mm min:00 max:59 "00"] ST
+
+
+<label> Event Description (required) 750 Symbols can be displayed, more are allowed but won't be visible on discord</label>
+    [textarea* Description placeholder="Hippety Hoppety no clopping on fc property"] 
+
+
+<label> Featured Image (3MB Limit, also please check if your picture is free to use, if it is not from ffxiv itself. Respect the copyright! :P) </label>
+    [file image limit:3000000]
+
+
+[quiz SecretKey "SecretKey|VariableName"]
+
+<div class="submit">
+[submit "Send"]
+</div>
+</div>

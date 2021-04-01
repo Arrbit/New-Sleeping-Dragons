@@ -30,11 +30,12 @@
 <div class="container">
 
 <style>
-#menu-header{
+#menu-header{     /* Where is this used? */
     margin-top: auto;
     margin-bottom: auto;
 }
-#menu-header > li {
+
+.nav-menu-container  li {
     list-style:none;
     display: inline;
     padding-right:20px;

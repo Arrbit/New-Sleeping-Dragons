@@ -9,17 +9,20 @@
 
 <header class="wrap">
     <div class="links">
-    <div class="flexi color--black-accent">
-    <?php echo get_bloginfo()?>
-    </div>
 
-    <div class="flexi color--black-accent">
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png"
-            class="logo" alt="SDS-Logo">
-    </div>
+        <div class="title-container flexi color--black-accent">
+        <?php echo get_bloginfo()?>
+        </div>
 
-    <div class="flexi color--black-accent">
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        <div class="logo-container flexi">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png"
+                class="logo" alt="SDS-Logo">
+        </div>
+
+        <div class="nav-menu-container flexi flex-md-row flex-sm-column d-flex color--black-accent">
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        </div>
+        
     </div>
 </header>
 
@@ -27,11 +30,11 @@
 <div class="container">
 
 <style>
-#menu-header-menu{
+#menu-header{
     margin-top: auto;
     margin-bottom: auto;
 }
-#menu-header-menu > li {
+#menu-header > li {
     list-style:none;
     display: inline;
     padding-right:20px;
@@ -80,6 +83,42 @@ a:hover {
   background: black;
   width: 100%;
   transform: translateY(-50%);
+}
+
+/* Bootstrap SM Set-up */
+@media (max-width: 865px) { 
+
+    .nav-menu-container{
+        margin-top: 2vh;
+        transform: translate(-15vw, 2vh);
+        font-size: 80%;
+        overflow: hidden;
+    }
+
+    /*#menu-header > li {
+
+    }*/
+
+    .logo-container{
+        margin-left: -80vw;
+        transform: scaleX(-1);
+        margin-top: -2vh;
+    }
+
+    .title-container{
+        transform:translate(18vw,-1vh);
+    }
+
+    .wrap:before {
+        content: '';
+        position: absolute;
+        top: 2vh;
+        left: 20vw;
+        border-top: 1.5px solid black;
+        background: black;
+        width: 60vw;
+        transform: translateY(-50%);
+    }
 }
 
 </style>

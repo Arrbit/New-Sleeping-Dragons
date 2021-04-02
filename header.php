@@ -24,15 +24,13 @@
         </div>
 
         <div class="mobile-menu-container flex-row justify-content-between d-md-none w-100">
-            <div class="mobile-menu-wrapper">
                 <ul>
-                    <li class="flex-fill p-3 border">Events</li>
-                    <li class="flex-fill p-3 border">Letters</li>
-                    <li class="flex-fill p-3 border">Members</li>
-                    <li class="flex-fill p-3 border">Guides</li>
-                    <li class="flex-fill p-3 border">Discord</li>
+                    <li class="flex-fill rounded"><a href="/?page_id=29">Events</a></li>
+                    <li class="flex-fill rounded"><a href="/?page_id=30">Letters</a></li>
+                    <li class="flex-fill rounded"><a href="/?page_id=31">Members</a></li>
+                    <li class="flex-fill rounded"><a href="/?page_id=32">Guides</a></li>
+                    <li class="flex-fill rounded"><a href="https://discord.gg/">Discord</a></li>
                 </ul>
-            </div>
         </div>
         
     </div>
@@ -42,17 +40,27 @@
 <div class="container">
 
 <style>
-#menu-header{     /* Where is this used? */
-    margin-top: 5;
-    margin-bottom: 5;
+
+/* Big DIVs */
+.wrap {
+  text-align: center;
+  margin: 20px;
+  position: relative;
+}
+.links {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
-.nav-menu-container  li {
-    list-style:none;
-    display: inline;
-    padding-right:20px;
+.flexi {
+    flex: 1 1 0px;
 }
 
+/* Smaller than SM Set-up */
+
+/* Nav Menu */
 .mobile-menu-container {
     position:absolute;
     max-width: 100%;
@@ -66,10 +74,30 @@
     background-color: rgba(208, 208, 208, 0.5);
     position:relative;
     margin-bottom: 1%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3e3e3e;
+    padding: 3%;
 }
 
-.flexi{
-    flex: 1 1 0px;
+/* Title */
+.title-container{
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-top: 100px;
+    margin-bottom: 1%;
+    position:relative;
+    display: inline-flex;
+    font-size: 125%;
+}
+
+/* Logo */
+.logo-container{
+    right: 0;
+    position: absolute;
+    opacity: 80%;
+    padding-top: 60px;
+    transform: scale(0.8);
 }
 
 .logo{
@@ -77,6 +105,7 @@
     height:110px;
 }
 
+/* Color */
 .color--black-accent{
     color: #3e3e3e;
 }
@@ -91,60 +120,44 @@ a:hover {
     text-decoration: none;
 }
 
-.wrap {
-  text-align: center;
-  margin: 20px;
-  position: relative;
-}
-.links {
-  padding: 0 10px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-.wrap:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-top: 1px solid black;
-  background: black;
-  width: 100%;
-  transform: translateY(-50%);
+/* Bigger than SM Set-up */
+
+/* Nav Menu */
+.nav-menu-container  li {
+    list-style:none;
+    display: inline;
+    padding-right:20px;
 }
 
-/* Bootstrap SM Set-up */
-@media (max-width: 768px) { 
-
-    /*.nav-menu-container{
-        margin-top: 2vh;
-        transform: translate(-15vw, 2vh);
-        font-size: 80%;
-        overflow: hidden;
-    }*/
-
+@media (min-width: 768px) { 
+    /* Logo */
     .logo-container{
-        position: absolute;
-        right: 0;
-        margin-top: -2vh;
-        opacity: 80%;
+        position: relative;
+        opacity: 100%;
+        margin-top: 0;
+        padding: 0;
     }
-
+    /* Title */
     .title-container{
         position: relative;
-        transform:translate(20vw,10vh);
+        transform: translate(0,0);
+        font-size: 150%;
+        padding: 0;
+        left:0;
+        margin: 0;
     }
 
+    /* Horizontal Line */
     .wrap:before {
         content: '';
         position: absolute;
-        display: none;
-        top: 2vh;
-        left: 20vw;
-        border-top: 1.5px solid black;
+        top: 50%;
+        left: 0;
+        border-top: 1px solid black;
         background: black;
-        width: 60vw;
+        width: 100%;
         transform: translateY(-50%);
     }
+    
 }
 </style>

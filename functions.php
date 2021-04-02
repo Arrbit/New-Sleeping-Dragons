@@ -1,7 +1,8 @@
 <?php
 #Load Styles (Order Matters :))
 function enqueue_styles() {
-    wp_enqueue_style('Style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('card', get_template_directory_uri() . '/css/card.css');
     wp_enqueue_style('frontpage', get_template_directory_uri() . '/css/frontpage.css');
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
 }
@@ -80,6 +81,4 @@ function create_posttype() {
     );
 }
 add_action( 'init', 'create_posttype' );
-
-
 ?>

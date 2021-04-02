@@ -18,6 +18,13 @@ if (have_posts()) {
         </a>
     <?php endif; ?>
 
+
+    <div class="card_title font--righteous">
+                            <?php the_title(); ?>
+                    </div>
+
+
+
     <?php the_content();?>
 
 <?php 

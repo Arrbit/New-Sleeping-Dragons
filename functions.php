@@ -82,7 +82,7 @@ function create_posttype() {
 }
 add_action( 'init', 'create_posttype' );
 
-/** Ajax **/
+/** Ajax Implementation Start Members**/
 wp_register_script( 'core-js', get_template_directory_uri() . '/js/core.js');
 wp_enqueue_script( 'core-js' );
 
@@ -93,7 +93,7 @@ wp_localize_script( 'core-js', 'ajax_posts', array(
 
 function more_post_ajax(){
 
-  $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
+  $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 9;
   $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
 
   header("Content-Type: text/html");
@@ -110,10 +110,21 @@ function more_post_ajax(){
   $out = '';
 
   if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
-      $out .= '<div class="small-12 large-4 columns">
-              <h1>'.get_the_title().'</h1>
-              <p>'.get_the_content().'</p>
-       </div>';
+      $out .= 
+      '<a class="member_card" href='.get_the_permalink().'>
+
+      <div class="card card_container flex-column d-flex">
+      <div class="card_img member_card_img">
+      '.(has_post_thumbnail() ? get_the_post_thumbnail() : '
+      <img sizes="(max-width: 768px) 100vw, 768px"  width="768" height="432" loading="lazy" 
+      class="attachment-medium_large size-medium_large wp-post-image" src="'.get_stylesheet_directory_uri().'/assets/img/404.png"> ').'
+      </div>
+
+          <div class="card_title font--righteous">
+          '.get_the_title().'
+          </div>
+        </div>
+      </a>';
 
   endwhile;
   endif;
@@ -123,5 +134,6 @@ function more_post_ajax(){
 
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+/** Ajax Implementation End Members**/
 
 ?>

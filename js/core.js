@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
     
-var ppp = 3; // Post per page
+var ppp = 9; // Post per page
 var pageNumber = 1;
 
 
@@ -30,8 +30,6 @@ function load_posts(){
 }
 
 jQuery(window).on('scroll', function () {
-    console.log(jQuery(window).scrollTop() + jQuery(window).height());
-    console.log(jQuery(document).height() - 100);
     if (jQuery(window).scrollTop() + jQuery(window).height()  >= jQuery(document).height() - 100) {
         load_posts();        
     }

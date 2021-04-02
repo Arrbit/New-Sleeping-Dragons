@@ -10,7 +10,7 @@
 <header class="wrap">
     <div class="links">
 
-        <div class="title-container flexi color--black-accent">
+        <div class="title-container flexi font--righteous">
         <?php echo get_bloginfo()?>
         </div>
 
@@ -19,8 +19,20 @@
                 class="logo" alt="SDS-Logo">
         </div>
 
-        <div class="nav-menu-container flexi flex-md-row flex-sm-column d-flex color--black-accent">
+        <div class="nav-menu-container flexi flex-md-row flex-sm-column d-flex d-md-flex d-none">
             <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        </div>
+
+        <div class="mobile-menu-container flex-row justify-content-between d-md-none w-100">
+            <div class="mobile-menu-wrapper">
+                <ul>
+                    <li class="flex-fill p-3 border">Events</li>
+                    <li class="flex-fill p-3 border">Letters</li>
+                    <li class="flex-fill p-3 border">Members</li>
+                    <li class="flex-fill p-3 border">Guides</li>
+                    <li class="flex-fill p-3 border">Discord</li>
+                </ul>
+            </div>
         </div>
         
     </div>
@@ -31,8 +43,8 @@
 
 <style>
 #menu-header{     /* Where is this used? */
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 5;
+    margin-bottom: 5;
 }
 
 .nav-menu-container  li {
@@ -41,12 +53,27 @@
     padding-right:20px;
 }
 
+.mobile-menu-container {
+    position:absolute;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mobile-menu-container li {
+    list-style:none;
+    display: inline-flex;
+    color: black;
+    background-color: rgba(208, 208, 208, 0.5);
+    position:relative;
+    margin-bottom: 1%;
+}
+
 .flexi{
     flex: 1 1 0px;
 }
 
 .logo{
-    width:auto;
+    width:5;
     height:110px;
 }
 
@@ -87,32 +114,31 @@ a:hover {
 }
 
 /* Bootstrap SM Set-up */
-@media (max-width: 865px) { 
+@media (max-width: 768px) { 
 
-    .nav-menu-container{
+    /*.nav-menu-container{
         margin-top: 2vh;
         transform: translate(-15vw, 2vh);
         font-size: 80%;
         overflow: hidden;
-    }
-
-    /*#menu-header > li {
-
     }*/
 
     .logo-container{
-        margin-left: -80vw;
-        transform: scaleX(-1);
+        position: absolute;
+        right: 0;
         margin-top: -2vh;
+        opacity: 80%;
     }
 
     .title-container{
-        transform:translate(18vw,-1vh);
+        position: relative;
+        transform:translate(20vw,10vh);
     }
 
     .wrap:before {
         content: '';
         position: absolute;
+        display: none;
         top: 2vh;
         left: 20vw;
         border-top: 1.5px solid black;
@@ -121,5 +147,4 @@ a:hover {
         transform: translateY(-50%);
     }
 }
-
 </style>

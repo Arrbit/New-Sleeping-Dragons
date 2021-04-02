@@ -2,7 +2,7 @@
 <!--closing of the container -->
 
 <footer>
-    <div class="p-2 d-flex" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="p-2 d-flex background-color--silver-accent">
         <div class="flex-fill justify-content-start align-self-center">
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
         </div>
@@ -28,6 +28,10 @@ padding-right:20px;
 .color--black-accent{
     color: #3e3e3e;
 
+}
+
+.background-color--silver-accent{
+    background-color: #D0D0D0;
 }
 
 a {

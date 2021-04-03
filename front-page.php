@@ -108,21 +108,22 @@ function change(){
         width: 0;
         height: 0;
         border-style: solid;
-        border-width: 20vw 20vh 0 20vh;
+        border-width: 40vw 20vh 0 40vh;
         border-color:  #8A0707 transparent transparent;
         position: absolute;
-        top: 40px;
-        right: 40px;
+        top: 6%;
+        right: calc(4% - 1vw);
     }
 
     .blackTriangle {
         width: 0;
         height: 0;
         border-style: solid;
-        border-width: 20vw 20vh 0 20vh;
+        border-width: 40vw 20vh 0 40vh;
         border-color: #3E3E3E transparent transparent;
         position: absolute;
-        right: 30px;
+        right: calc(3% - 1vw);
+        max-width: 10vw;
     }
 
 </style>

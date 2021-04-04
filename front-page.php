@@ -22,13 +22,26 @@
         id="frontpage--logo" class="position-absolute" alt="SDS-Logo">
     </div>
 
-    <div class="redTriangle"></div>
-    <div class="blackTriangle"></div>
-    <div class="greyTriangle"></div>
+    <div id="redTriangle"></div>
+    <div id="blackTriangle"></div>
+    <div id="greyTriangle"></div>
+    <div id="vLine"></div>
+    <div id="hLine"></div>
 
+    <div id="eyecatcher--title-container" class="font--righteous">
+        <div class="position-absolute">
+            <?php echo get_bloginfo()?>
+            <!-- Sleeping<br>Dragons (alternative)-->
+        </div>
+    </div>
 
     <div id="frontpage--nav-menu-container" class="flex-column">
         <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+    </div>
+
+    <div id="eyecatcher--button-container">
+        <div id="eyecatcher-button-text" class="position-absolute">A Phoenix-based FC.</div>
+        <a class="position-absolute" href="#">EXPLORE</a>
     </div>
 
 </div>
@@ -50,15 +63,7 @@ function change(){
 </script> -->
 
 <style>
-
-    #frontpage--logo {
-        width: 650px;
-        height: 650px;
-        transform: scaleX(-1);
-        margin-top: 20vh;
-        margin-left: -250px;
-    }
-
+    /* Eyecatcher Container */
     #frontpage--eyecatcher-container {
         max-width: 100vw;
         height: 100vh;
@@ -67,11 +72,26 @@ function change(){
         background-color: white
     }
 
-    #frontpage--nav-menu-container {
-        transform: translate(50vw, 50vh);
-        position: absolute;
+    /* Logo */
+    #frontpage--logo {
+        width: 30vw;
+        height: 50vh;
+        transform: scaleX(-1);
+        margin-top: 25vh;
+        left:-15vw;
     }
 
+    /* Title */
+    #eyecatcher--title-container{
+        transform: translate(18vw, 30vh);
+        font-size: 500%;
+    }
+
+    /* Nav Menu */
+    #frontpage--nav-menu-container {
+        transform: translate(69vw, 52vh);
+        position: absolute;
+    }
     #frontpage--nav-menu-container  li {
         list-style:none;
         padding-right:20px;
@@ -81,18 +101,41 @@ function change(){
     #frontpage--nav-menu-container  li a{
         flex: auto; 
         padding:5px;
-        border: 0px solid #3E3E3E;
-        border-radius: 5px;
+        border: 1px solid rgba(62, 62, 62, 0.4);
+        border-radius: 3px;
         color: #8A0707;
         background-color: rgba(208, 208, 208, 0.7);
         text-align: center;
         text-decoration: none;
         display: flex;
         align-items: center;
-        justify-content: center
+        justify-content: center;
     }
 
-    .greyTriangle {
+    /* Explore Button */
+    #eyecatcher--button-container{
+        transform: translate(calc(50vw - 45px), 70vh);
+    }
+    #eyecatcher-button-text {
+        transform: translate(-15px, -25px);
+    }
+    #eyecatcher--button-container a{
+        flex: auto; 
+        padding:7px 20px 7px 20px;
+        border: 2px solid rgba(62, 62, 62, 1);
+        border-radius: 5px;
+        color: rgba(62, 62, 62, 1);
+        background-color: rgba(208, 208, 208, 0.7);
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Shapes */
+    #greyTriangle {
         width: 0;
         height: 0;
         border-style: solid;
@@ -103,8 +146,7 @@ function change(){
         right: 0;
         margin-top: -50px;
     }
-
-    .redTriangle {
+    #redTriangle {
         width: 0;
         height: 0;
         border-style: solid;
@@ -114,8 +156,7 @@ function change(){
         top: 6%;
         right: calc(4% - 1vw);
     }
-
-    .blackTriangle {
+    #blackTriangle {
         width: 0;
         height: 0;
         border-style: solid;
@@ -124,6 +165,20 @@ function change(){
         position: absolute;
         right: calc(3% - 1vw);
         max-width: 10vw;
+    }
+    #vLine{
+        border-left: 3px solid #3E3E3E;
+        height: 50%;
+        position: absolute;
+        top: 20vh;
+        right: 23vw;
+    }
+    #hLine{
+        border-top: 3px solid #3E3E3E;
+        width: 30%;
+        position: absolute;
+        top: 50vh;
+        right: 5vw;
     }
 
 </style>

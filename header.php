@@ -8,7 +8,7 @@
 
 <!-- SM Header-->
 <header id="sm-header" class="d-flex d-md-none appbar">
-    <img class="appbar_mobile_button" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png" class="logo" alt="SDS-Logo">
+    <a href="/"><img class="appbar_mobile_button" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png" class="logo" alt="SDS-Logo"></a>
 
     <div class="nav-menu-container appbar_menu">
         <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
@@ -19,12 +19,12 @@
 <header id="md_header" class="wrap d-md-flex d-none">
 
         <div class="title-container flexi font--righteous">
-        <?php echo get_bloginfo()?>
+        <a href="/"><?php echo get_bloginfo()?></a>
         </div>
 
         <div class="logo-container flexi">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png"
-                class="logo" alt="SDS-Logo">
+        <a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png"
+                class="logo" alt="SDS-Logo"></a>
         </div>
 
         <div class="nav-menu-container flexi">

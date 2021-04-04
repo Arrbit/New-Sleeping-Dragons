@@ -91,7 +91,7 @@ img {
 
 /** too weak defined changes for index.php please define better. they will break things */
 
-img{
+.card img{
     height: auto;
 }
 .super-round{
@@ -103,12 +103,12 @@ padding: 2em;
 .card_title{
     margin-bottom:1em;
 }
-figure{
+.card figure{
     margin:auto;
     padding-top:1em;
 }
 
-figcaption{
+.card figcaption{
     font-size: 0.9em;
     margin:auto;
     padding-left: 1em;

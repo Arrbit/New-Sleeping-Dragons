@@ -6,7 +6,8 @@
 <?php wp_head(); ?>
 </head>
 
-<header id="sm-header" class="d-flex d-md-none appbar flex-row ">
+<!-- SM Header-->
+<header id="sm-header" class="d-flex d-md-none appbar">
     <img class="appbar_mobile_button" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png" class="logo" alt="SDS-Logo">
 
     <div class="nav-menu-container appbar_menu">
@@ -14,42 +15,39 @@
     </div>
 </header>
 
-<header id="md_header" class=" d-md-flex d-none wrap">
-    <div class="links">
+<!-- MD Header-->
+<header id="md_header" class="wrap d-md-flex d-none">
 
-        <div class="title-container flexi font--righteous ">
+        <div class="title-container flexi font--righteous">
         <?php echo get_bloginfo()?>
         </div>
 
-        <div class="logo-container flexi d-xs-none">
+        <div class="logo-container flexi">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png"
                 class="logo" alt="SDS-Logo">
         </div>
 
-        <div class="nav-menu-container flexi flex-md-row">
+        <div class="nav-menu-container flexi">
             <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
         </div>
-
-
-        <!-- <div class="mobile-menu-container flex-row justify-content-between d-md-none w-100"> -->
-<!--         
-                <ul>
-                    <li class="flex-fill rounded"><a href="/?page_id=29">Events</a></li>
-                    <li class="flex-fill rounded"><a href="/?page_id=30">Letters</a></li>
-                    <li class="flex-fill rounded"><a href="/?page_id=31">Members</a></li>
-                    <li class="flex-fill rounded"><a href="/?page_id=32">Guides</a></li>
-                    <li class="flex-fill rounded"><a href="https://discord.gg/">Discord</a></li>
-                </ul>
-        </div> -->
-
-        
-    </div>
 </header>
 
 <!-- This container class will be closed in the footer :) -->
 <div class="container">
 
 <style>
+/* Big DIVs */
+.wrap {
+  text-align: center;
+  margin: 20px;
+  position: relative;
+}
+
+.flexi {
+    flex: 1 1 0px;
+}
+/* -----------SM Setup----------- */
+/* Appbar */
 .appbar_menu ul{
     height:inherit;
     padding:5px;
@@ -62,7 +60,6 @@
     padding-right: unset !important;
 
 }
-
 .appbar a{
     flex: auto; 
     padding:5px;
@@ -74,54 +71,13 @@
     justify-content: center
 
 }
-
 .appbar{
     max-height:12vh;
 }
-
 .appbar_mobile_button{
     width:auto;
     min-height:40px;
     max-height: inherit;
-}
-
-/* Big DIVs */
-.wrap {
-  text-align: center;
-  margin: 20px;
-  position: relative;
-}
-.links {
-  padding: 0 10px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.flexi {
-    flex: 1 1 0px;
-}
-
-/* Smaller than SM Set-up */
-
-/* Nav Menu */
-.mobile-menu-container {
-    position:absolute;
-    max-width: 100%;
-    margin: auto;
-}
-
-.mobile-menu-container li {
-    list-style:none;
-    display: inline-flex;
-    color: black;
-    background-color: rgba(208, 208, 208, 0.5);
-    position:relative;
-    margin-bottom: 1%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #3e3e3e;
-    padding: 3%;
 }
 
 /* Title */
@@ -164,8 +120,7 @@ a:hover {
     text-decoration: none;
 }
 
-/* Bigger than SM Set-up */
-
+/* -----------MD Setup----------- */
 /* Nav Menu */
 .nav-menu-container  li {
     list-style:none;

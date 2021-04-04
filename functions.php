@@ -136,4 +136,15 @@ add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 /** Ajax Implementation End Members**/
 
+
+
+add_action( 'after_setup_theme', 'wnd_default_image_settings' );
+
+function wnd_default_image_settings() {
+	update_option( 'image_default_align', 'center' );
+	update_option( 'image_default_link_type', 'file' );
+	update_option( 'image_default_size', 'large' );
+}
+
+
 ?>

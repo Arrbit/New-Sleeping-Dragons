@@ -7,7 +7,7 @@
  <?php get_header();?>
 <div class="archive_title flex-row d-flex">
     <div class="archive_title_always font--righteous">
-        <?php echo get_the_title();?>
+        <?php post_type_archive_title();?>
     </div>
     <div class="optional"></div>
 </div>

@@ -28,21 +28,21 @@
     <div id="vLine"></div>
     <div id="hLine"></div>
 
-    <div id="eyecatcher--title-container" class="font--righteous">
+    <!-- <div id="eyecatcher--title-container" class="font--righteous">
         <div class="position-absolute">
             <?php echo get_bloginfo()?>
-            <!-- Sleeping<br>Dragons (alternative)-->
+             Sleeping<br>Dragons (alternative)
         </div>
-    </div>
+    </div> -->
 
     <div id="frontpage--nav-menu-container" class="flex-column">
         <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
     </div>
 
-    <div id="eyecatcher--button-container">
+    <!-- <div id="eyecatcher--button-container">
         <div id="eyecatcher-button-text" class="position-absolute">A Phoenix-based FC.</div>
         <a class="position-absolute" href="#">EXPLORE</a>
-    </div>
+    </div>  -->
 
 </div>
 

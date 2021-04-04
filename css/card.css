@@ -87,3 +87,29 @@ img {
         margin:auto;
     }
 }
+
+
+/** too weak defined changes for index.php please define better. they will break things */
+
+img{
+    height: auto;
+}
+.super-round{
+    border-radius:1em;
+}
+.index_content{
+padding: 2em;
+}
+.card_title{
+    margin-bottom:1em;
+}
+figure{
+    margin:auto;
+    padding-top:1em;
+}
+
+figcaption{
+    font-size: 0.9em;
+    margin:auto;
+    padding-left: 1em;
+}

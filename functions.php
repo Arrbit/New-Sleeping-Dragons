@@ -3,6 +3,7 @@
 function enqueue_styles() {
     wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('card', get_template_directory_uri() . '/css/card.css');
+    wp_enqueue_style('pagination', get_template_directory_uri() . '/css/pagination.css');
     wp_enqueue_style('frontpage', get_template_directory_uri() . '/css/frontpage.css');
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
 }
@@ -146,5 +147,50 @@ function wnd_default_image_settings() {
 	update_option( 'image_default_size', 'large' );
 }
 
+function wordpress_pagination(){
+  global $wp_query; 
+  echo paginate_links();
+}
+
+ function render_pagination(){ ?>
+  <div class="pagination">
+      <?php
+      add_filter('wp_link_pages_args', 'wp_link_pages_args_prevnext_add');
+      function wp_link_pages_args_prevnext_add($args)
+      {
+          global $page, $numpages, $more, $pagenow;
+
+          if (!$args['next_or_number'] == 'next_and_number') 
+              return $args; # exit early
+
+          $args['next_or_number'] = 'number'; # keep numbering for the main part
+          if (!$more)
+              return $args; # exit early
+
+          if($page-1) # there is a previous page
+              $args['before'] .= _wp_link_page($page-1)
+                  . $args['link_before']. $args['previouspagelink'] . $args['link_after'] . '</a>'
+              ;
+
+          if ($page<$numpages) # there is a next page
+              $args['after'] = _wp_link_page($page+1)
+                  . $args['link_before'] . ' ' . $args['nextpagelink'] . $args['link_after'] . '</a>'
+                  . $args['after']
+              ;
+
+          return $args;
+      }
+      wp_link_pages(array(
+          'before' => '<p style="flex:auto">' . __('Pages: '),
+          'after' => '</p>',
+          'next_or_number' => 'next_and_number', # activate parameter overloading
+          'nextpagelink' => __(' Next '),
+          'previouspagelink' => __(' Previous '),
+          'separator'        => ' ',
+          'pagelink' => '%',
+          'echo' => 1 )
+      );?>
+      </div> <?php 
+  }
 
 ?>

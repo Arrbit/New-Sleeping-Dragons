@@ -1,133 +1,136 @@
 
+<?php
+/**
+ * Form_Events Page
+ * Theme Name: New Sleeping Dragons
+ * Template Name: Shows upcoming Events
+*/?>
+<?php get_header();?>
+<div class="archive_title flex-row d-flex">
+    <div class="archive_title_always font--righteous">
+        <?php echo get_the_title();?>
+    </div>
+    <div class="optional"></div>
+</div>
+<div class="card_collection">
 
-        <?php
-        $inaweek = date("Y-m-d", time() + (60 * 60 * 24 * +7) );
-
-        $args = array(
-            'meta_key'          => 'date',
-            'orderby'           => 'meta_value',
-            'order'             => 'ASC',
-            'post_type'        => 'form_events', // the post type 
-            'post_status' => 'publish',
-            'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
-                array(
-                    'key' => 'date', // Check the start date field
-                    'value' => date("Y-m-d"), // Set today's date (note the similar format)
-                    'compare' => '>=', // Return the ones greater than today's date
-                    'type' => 'DATE' // Let WordPress know we're working with date
-                ),
-                array(
-                    'key' => 'date', // Check the start date field
-                    'value' => $inaweek, // Set today's date (note the similar format)
-                    'compare' => '<', // Return the ones greater than today's date
-                    'type' => 'DATE' // Let WordPress know we're working with date
-                )
-                ),
-        );
-
-        
-        $loop = new WP_Query( $args );
-        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php $inaweek = date("Y-m-d", time() + (60 * 60 * 24 * +7) ); ?>
+<?php $args = array(
+        'meta_key'          => 'date',
+        'orderby'           => 'meta_value',
+        'order'             => 'ASC',
+        'post_type'        => 'form_events', // the post type 
+        'post_status' => 'publish',
+        'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
+            array(
+            'key' => 'date', // Check the start date field
+            'value' => date("Y-m-d"), // Set today's date (note the similar format)
+            'compare' => '>=', // Return the ones greater than today's date
+            'type' => 'DATE' // Let WordPress know we're working with date
+            ),
+            array(
+            'key' => 'date', // Check the start date field
+            'value' => $inaweek, // Set today's date (note the similar format)
+            'compare' => '<', // Return the ones greater than today's date
+            'type' => 'DATE' // Let WordPress know we're working with date
+            )
+        ),
+    );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 
-        <div class="fevent">
-            <div class="fthumb left">
-                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                    <?php if ( has_post_thumbnail() ) : ?>
-                        <?php the_post_thumbnail('medium_large'); ?>
-                    <?php else : ?>
-                        <img src="https://sleepingdragons.eu/wp-content/uploads/2020/04/2020-04-27-13-51-22EG11-03-Ambient-1024x576.png">
-                    <?php endif; ?>
-                </a>
+    <a class="d-flex" href="<?php the_permalink();?>">
+        <div class="card card_container flex-sm-column flex-md-row d-flex">
+            <div class="card_img">
+            <?php if ( has_post_thumbnail() ) : ?>
+                    <?php the_post_thumbnail('medium_large'); ?>
+                <?php else : ?>
+                    <img sizes="(max-width: 768px) 100vw, 768px"  width="768" height="432"   loading="lazy" 
+                        class="attachment-medium_large size-medium_large wp-post-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png">
+                <?php endif; ?>
             </div>
-
-            <div class="fbody right">
-                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-
-                <div class="ftitle">
-                <?php the_title(); ?> 
+                
+            <div class="card_content">
+                <div class="card_title font--righteous">
+                        <?php the_title(); ?>        
                 </div>
-                <div class="fdate_time">
-                <?php echo get_post_meta(get_the_ID(), 'time', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'timemm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d/m/Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
-                <?php if (date('Y-m-d') == date('Y-m-d', strtotime(get_post_meta(get_the_ID(), 'date', TRUE)))) {
-                    ?> <div class="today"> today </div> <?php } ?>
+                <div class="card_time">
+                    <?php echo get_post_meta(get_the_ID(), 'hh', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'mm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d/m/Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
                 </div>
-                <?php the_excerpt(); ?> 
-                </a>
-            </div>
-        </div>
-        
-                    
-                        
-        <?php endwhile; ?>
-        <?php wp_reset_query(); ?>
-
-
-        <?php
-
-        $args = array(
-            'meta_key'          => 'date',
-            'orderby'           => 'meta_value',
-            'order'             => 'ASC',
-            'post_type'        => 'form_events', // the post type 
-            'post_status' => 'publish',
-            'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
-                array(
-                    'key' => 'date', // Check the start date field
-                    'value' => date("Y-m-d"), // Set today's date (note the similar format)
-                    'compare' => '>=', // Return the ones greater than today's date
-                    'type' => 'DATE' // Let WordPress know we're working with date
-                ),
-                array(
-                    'key' => 'date', // Check the start date field
-                    'value' => $inaweek, // Set today's date (note the similar format)
-                    'compare' => '>=', // Return the ones greater than today's date
-                    'type' => 'DATE' // Let WordPress know we're working with date
-                )
-                ),
-        );
-
-
-
-        
-        $loop = new WP_Query( $args );
-
-
-        if( ($loop->have_posts())) { ?>
-            <div class="inaweek">Next week and later!</div>
-            <div class="inaweek_list">
-            <?php
-          }
-
-        while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <div class="fevent">
-            <div class="fthumb left">
-                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                    <?php if ( has_post_thumbnail() ) : ?>
-                        <?php the_post_thumbnail('medium_large'); ?>
-                    <?php else : ?>
-                        <img src="https://sleepingdragons.eu/wp-content/uploads/2020/04/2020-04-27-13-51-22EG11-03-Ambient-1024x576.png">
-                    <?php endif; ?>
-                </a>
-            </div>
-
-            <div class="fbody right">
-                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-
-                <div class="ftitle">
-                <?php the_title(); ?> 
-                </div>
-                <div class="fdate_time">
-                <?php echo get_post_meta(get_the_ID(), 'time', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'timemm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d/m/Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
-
-                </div>
-                <?php the_excerpt(); ?> 
-                </a>
+                    <?php echo get_the_excerpt(); ?>
             </div>
         </div>
-        
-                    
-                        
-        <?php endwhile; ?>
+    </a>
+<?php endwhile; ?>
+<?php wp_reset_query(); ?>
+
+<?php
+$args = array(
+    'meta_key'          => 'date',
+    'orderby'           => 'meta_value',
+    'order'             => 'ASC',
+    'post_type'        => 'form_events', // the post type 
+    'post_status' => 'publish',
+    'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
+        array(
+        'key' => 'date', // Check the start date field
+        'value' => date("Y-m-d"), // Set today's date (note the similar format)
+        'compare' => '>=', // Return the ones greater than today's date
+        'type' => 'DATE' // Let WordPress know we're working with date
+        ),
+        array(
+        'key' => 'date', // Check the start date field
+        'value' => $inaweek, // Set today's date (note the similar format)
+        'compare' => '>=', // Return the ones greater than today's date
+        'type' => 'DATE' // Let WordPress know we're working with date
+        )
+    ),
+);
+
+$loop = new WP_Query( $args );
+
+
+if( ($loop->have_posts())) { ?>
+<div class="archive_title flex-row d-flex">
+    <div class="archive_title_always font--righteous">
+    Next week and later!   
+    </div>
+    <div class="optional"></div>
+</div>
+
+<div class="next_weeks_events_card">
+<?php }
+
+while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+    <a class="d-flex" href="<?php the_permalink();?>">
+        <div class="card card_container flex-sm-column flex-md-row d-flex">
+            <div class="card_img">
+            <?php if ( has_post_thumbnail() ) : ?>
+                    <?php the_post_thumbnail('medium_large'); ?>
+                <?php else : ?>
+                    <img sizes="(max-width: 768px) 100vw, 768px"  width="768" height="432"   loading="lazy" 
+                        class="attachment-medium_large size-medium_large wp-post-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png">
+                <?php endif; ?>
+            </div>
+                
+            <div class="card_content">
+                <div class="card_title font--righteous">
+                        <?php the_title(); ?>        
+                </div>
+                <div class="card_time">
+                    <?php echo get_post_meta(get_the_ID(), 'hh', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'mm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d/m/Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
+                </div>
+                    <?php echo get_the_excerpt(); ?>
+            </div>
         </div>
-        </div>
+    </a>
+
+
+<?php endwhile; ?>
+
+    </div> <!-- next_weeks_events_card -->
+</div> <!-- card_collection -->
+
+<?php get_footer();?>

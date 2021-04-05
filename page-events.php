@@ -51,7 +51,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
             </div>
                 
             <div class="card_content">
-                <div class="card_title font--righteous">
+                <div class="card_title event_title font--righteous">
                         <?php the_title(); ?>        
                 </div>
                 <div class="card_time">
@@ -91,14 +91,14 @@ $loop = new WP_Query( $args );
 
 
 if( ($loop->have_posts())) { ?>
+<div class="next_weeks_events_card">
+
 <div class="archive_title flex-row d-flex">
     <div class="archive_title_always font--righteous">
     Next week and later!   
     </div>
     <div class="optional"></div>
 </div>
-
-<div class="next_weeks_events_card">
 <?php }
 
 while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -115,7 +115,7 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
             </div>
                 
             <div class="card_content">
-                <div class="card_title font--righteous">
+                <div class="card_title event_title font--righteous">
                         <?php the_title(); ?>        
                 </div>
                 <div class="card_time">

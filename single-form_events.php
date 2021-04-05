@@ -12,7 +12,7 @@
     <?php endif; ?>
 
     <div class="index_content">
-        <div class="card_title font--righteous">
+        <div class="card_title event_title font--righteous">
             <?php the_title(); ?>
         </div>
         <div class="card_time">

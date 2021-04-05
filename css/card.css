@@ -1,7 +1,11 @@
 .card_time{
     margin-bottom: 1em;
-
 }
+
+.event_title{
+    margin-bottom: 0.2em !important;
+}
+
 .card_collection{
     padding-bottom:10px;
 }
@@ -85,6 +89,10 @@ padding: 2em;
     font-size: 0.9em;
     margin:auto;
     padding-left: 1em;
+}
+
+.next_weeks_events_card{
+    padding-top: 2em;
 }
 
 /* Bootstrap MD Breakpoint */

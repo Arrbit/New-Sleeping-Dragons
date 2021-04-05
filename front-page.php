@@ -42,8 +42,8 @@
     <div id="eyecatcher--button-container">
         <div id="eyecatcher-button-text" class="position-absolute">A Phoenix-based FC.</div>
         <a class="position-absolute" href="#">EXPLORE</a>
-        <div id="lead-arrow-2"></div>
-        <div id="lead-arrow"></div>
+        <div id="lead-arrow-small"></div>
+        <div id="lead-arrow-big"></div>
         <hr role="separator">
     </div>
 
@@ -134,22 +134,23 @@ function change(){
         justify-content: center;
         transform: translate(calc(50vw - 45px), 90vh);
     }
-    #lead-arrow {
+    #lead-arrow-big {
         border: solid rgba(62, 62, 62, 1);
         border-width: 0 3px 3px 0;
         position: absolute;
         padding: 6px;
-        transform: translate(calc(50vw + 3px), calc(90vh + 45px)) rotate(45deg);
+        transform: translate(calc(50vw + 3px), calc(90vh + 42px)) rotate(45deg);
     }
-    #lead-arrow-2 {
+    #lead-arrow-small {
         border: solid rgba(62, 62, 62, 1);
         border-width: 0 3px 3px 0;
         position: absolute;
         padding: 3px;
-        transform: translate(calc(50vw + 5.5px), calc(90vh + 43px)) rotate(45deg);
+        transform: translate(calc(50vw + 5.5px), calc(90vh + 40px)) rotate(45deg);
     }
     #eyecatcher--button-container hr{
-        transform: translate(25vw,96vh);
+        transform: translate(25vw, calc(90vh + 45px));
+        position: absolute;
         width: 50%;
     }
 

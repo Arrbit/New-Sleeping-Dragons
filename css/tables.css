@@ -1,0 +1,18 @@
+.table_star table  tbody td:nth-child(1) {
+    width: 35px;
+    border-bottom:  solid 1px white;
+}
+
+.is-style-regular td {
+    padding: 0.5em;
+    border-bottom:  solid 1px#D0D0D0;
+}
+
+.is-style-regular tr:hover td{
+    border-bottom:  solid 1px black;
+
+}
+
+.is-style-regular a{
+    color:#8A0707;
+}

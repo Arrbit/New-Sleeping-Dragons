@@ -25,12 +25,12 @@
         <a href="/"><?php echo get_bloginfo()?></a>
     </div>
 
-    <div class="logo-container flexi">
+    <div class="logo-container flexible">
         <a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png"
                 class="logo" alt="SDS-Logo"></a>
     </div>
 
-    <div class="nav-menu-container flexi font--firasans">
+    <div class="nav-menu-container flexible font--firasans">
         <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
     </div>
 </header>

@@ -83,14 +83,17 @@ function create_posttype() {
 }
 add_action( 'init', 'create_posttype' );
 
-/** Ajax Implementation Start Members**/
-wp_register_script( 'core-js', get_template_directory_uri() . '/js/core.js');
-wp_enqueue_script( 'core-js' );
+/** Ajax Implementation Start Members
+ * This has been moved to archive-members.php for performance reasons
+ * **/
 
-wp_localize_script( 'core-js', 'ajax_posts', array(
-  'ajaxurl' => admin_url( 'admin-ajax.php' ),
-  'noposts' => __('No older posts found'),
-));	
+// wp_register_script( 'core-js', get_template_directory_uri() . '/js/core.js');
+// wp_enqueue_script( 'core-js' );
+
+// wp_localize_script( 'core-js', 'ajax_posts', array(
+//   'ajaxurl' => admin_url( 'admin-ajax.php' ),
+//   'noposts' => __('No older posts found'),
+// ));	
 
 function more_post_ajax(){
 

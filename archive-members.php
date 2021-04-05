@@ -3,7 +3,20 @@
  * Lists all Members
  * Theme Name: New Sleeping Dragons
  * Template Name: Lists all Members
- */?>
+ */
+
+
+/** Ajax Implementation to load more members check functions.php and core.js **/
+
+wp_register_script( 'core-js', get_template_directory_uri() . '/js/core.js');
+wp_enqueue_script( 'core-js' );
+
+wp_localize_script( 'core-js', 'ajax_posts', array(
+    'ajaxurl' => admin_url( 'admin-ajax.php' ),
+    'noposts' => __('No older posts found'),
+  ));	
+?>
+
 <?php get_header();?>
  
 <div class="archive_title d-flex">

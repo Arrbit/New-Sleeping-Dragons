@@ -9,7 +9,6 @@
 
 /* Logo */
 #frontpage--logo {
-    width: 32vw;
     height: 55vh;
     transform: scaleX(-1);
     margin-top: 25vh;
@@ -25,15 +24,15 @@
 /* Nav Menu */
 #frontpage--nav-menu-container {
     position: absolute;
-    transform: translate(25vw, 45vh);
+    transform: translate(35vw, 55vh);
 }
 
 #frontpage--nav-menu-container li {
     list-style: none;
     padding-right: 20px;
     position: relative;
-    display: inline;
-    margin-bottom: 5px;
+    display: inline-flex;
+    margin-bottom: 10px;
 
 }
 
@@ -126,6 +125,14 @@
     position: absolute;
     right: calc(3% - 1vw);
     max-width: 10vw;
+}
+#triangleHider{
+    width: 30vw;
+    height: 50vh;
+    right:0;
+    top: 50%;
+    position: absolute;
+    background-color: white;
 }
 
 /* #vLine{

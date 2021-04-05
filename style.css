@@ -17,7 +17,7 @@ Version: 0.1
 @font-face {
   font-family: FiraSans;
   src: local('FiraSans'), local('FiraSans-Regular'),
-      url('./assets/fonts/Fira_Sans/FiraSans-Regular.ttf') format('ttf');
+      url('./assets/fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype');
 }
 
 .font--righteous

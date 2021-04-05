@@ -24,9 +24,10 @@
 
     <div id="redTriangle"></div>
     <div id="blackTriangle"></div>
+    <div id="triangleHider"></div>
     <div id="greyTriangle"></div>
-    <div id="vLine"></div>
-    <div id="hLine"></div>
+    <!-- <div id="vLine"></div>
+    <div id="hLine"></div> -->
 
     <div id="eyecatcher--title-container" class="font--righteous">
         <div class="position-absolute">
@@ -35,13 +36,13 @@
         </div>
     </div>
 
-    <div id="frontpage--nav-menu-container" class="flex-row">
+    <div id="frontpage--nav-menu-container" class="flex-row font--firasans">
         <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
     </div>
 
     <div id="eyecatcher--button-container">
-        <div id="eyecatcher-button-text" class="position-absolute">A Phoenix-based FC.</div>
-        <a class="position-absolute" href="#">EXPLORE</a>
+        <div id="eyecatcher-button-text" class="position-absolute font--firasans">A Phoenix-based FC.</div>
+        <a class="position-absolute font--firasans" href="#">EXPLORE</a>
         <div id="lead-arrow-small"></div>
         <div id="lead-arrow-big"></div>
         <hr role="separator">

@@ -10,7 +10,7 @@
 <header id="sm-header" class="d-flex d-md-none appbar">
     <a href="/"><img class="appbar_mobile_button" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png" class="logo" alt="SDS-Logo"></a>
 
-    <div class="nav-menu-container appbar_menu">
+    <div class="nav-menu-container appbar_menu font--firasans">
         <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
     </div>
 </header>
@@ -27,7 +27,7 @@
                 class="logo" alt="SDS-Logo"></a>
         </div>
 
-        <div class="nav-menu-container flexi">
+        <div class="nav-menu-container flexi font--firasans">
             <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
         </div>
 </header>

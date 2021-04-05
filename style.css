@@ -14,9 +14,20 @@ Version: 0.1
        url('./assets/fonts/Righteous_Regular/righteous-v8-latin-regular.woff') format('woff');
 }
 
+@font-face {
+  font-family: FiraSans;
+  src: local('FiraSans'), local('FiraSans-Regular'),
+      url('./assets/fonts/Fira_Sans/FiraSans-Regular.ttf') format('ttf');
+}
+
 .font--righteous
 {
     font-family: Righteous;
+}
+
+.font--firasans
+{
+    font-family: FiraSans;
 }
 
 body{ height:100vh; margin:0; }

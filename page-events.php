@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Form_Events Page

@@ -12,57 +12,39 @@
 <?php wp_head(); ?>
 </head>
 
-<div>
-<!-- Closes in Footer -->
+<!-- Absolute Shapes -->
+<div id="redTriangle"></div>
+<div id="blackTriangle"></div>
+<div id="triangleHider"></div>
+<div id="greyTriangle"></div>
 
-<div id="frontpage--eyecatcher-container">
+<div> <!-- Header div, without the container, do not close -->
+    <div id="frontpage_eyecatcher" class="d-flex flex-nowrap flex-column flex-lg-row">
 
-    <div class="flex-logo">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_Transparent.png"
-        id="frontpage--logo" class="position-absolute" alt="SDS-Logo">
-    </div>
+        <div class="logo align-self-center">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_Transparent.png" alt="SDS-Logo">
+        </div>
 
-    <div class="flex-menu">
-        <div id="eyecatcher--title-container" class="font--righteous">
-            <div class="position-absolute">
-                <?php echo get_bloginfo()?>
+        <div class="frontpage_center align-self-center flex-column d-flex"> 
+            <h1 class="font--righteous frontpage-title">
+                    <?php echo get_bloginfo()?>
+            </h1>
+            <div class="d-flex flex-row frontpage_menu  font--firasans">
+
+                <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
             </div>
-        </div>
-
-        <div id="frontpage--nav-menu-container" class="flex-row font--firasans">
-            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-        </div>
-
-        <div id="eyecatcher--button-container">
-            <div id="eyecatcher-button-text" class="position-absolute font--firasans">A Phoenix-based FC.</div>
-            <a class="position-absolute font--firasans" href="#">EXPLORE</a>
-            <div id="lead-arrow-small"></div>
-            <div id="lead-arrow-big"></div>
+        </div>  
+    </div>
+    
+        <div class="frontpage_footer d-flex flex-column">
+            <!-- <div id="eyecatcher-button-text" class="position-absolute font--firasans">A Phoenix-based FC.</div> -->
+            <!-- <a class="position-absolute font--firasans" href="#">EXPLORE</a> -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+            <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+            </svg>
             <hr role="separator">
         </div>
     </div>
 
-    <div class="flex-shapes">
-        <div id="redTriangle"></div>
-        <div id="blackTriangle"></div>
-        <div id="triangleHider"></div>
-        <div id="greyTriangle"></div>
-    </div>
-
-</div>
-
 
 <?php get_footer();?>
-
-<!-- <script>
-var el = jQuery(".greyTriangle");
-var w = screen.width / 4 | 0; // calculate & trim decimals
-el.css("border-width", "575px " + w + "px " + "575px 0 ");
-
-
-window.addEventListener('resize', change);
-function change(){
-    var w = screen.width / 4 | 0; // calculate & trim decimals
-    el.css("border-width", "575px " + w + "px " + "575px 0 ");
-};
-</script> -->

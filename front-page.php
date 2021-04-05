@@ -17,35 +17,36 @@
 
 <div id="frontpage--eyecatcher-container">
 
-    <div>
+    <div class="flex-logo">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_Transparent.png"
         id="frontpage--logo" class="position-absolute" alt="SDS-Logo">
     </div>
 
-    <div id="redTriangle"></div>
-    <div id="blackTriangle"></div>
-    <div id="triangleHider"></div>
-    <div id="greyTriangle"></div>
-    <!-- <div id="vLine"></div>
-    <div id="hLine"></div> -->
+    <div class="flex-menu">
+        <div id="eyecatcher--title-container" class="font--righteous">
+            <div class="position-absolute">
+                <?php echo get_bloginfo()?>
+            </div>
+        </div>
 
-    <div id="eyecatcher--title-container" class="font--righteous">
-        <div class="position-absolute">
-            <?php echo get_bloginfo()?>
-             <!--Sleeping<br>Dragons (alternative)-->
+        <div id="frontpage--nav-menu-container" class="flex-row font--firasans">
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        </div>
+
+        <div id="eyecatcher--button-container">
+            <div id="eyecatcher-button-text" class="position-absolute font--firasans">A Phoenix-based FC.</div>
+            <a class="position-absolute font--firasans" href="#">EXPLORE</a>
+            <div id="lead-arrow-small"></div>
+            <div id="lead-arrow-big"></div>
+            <hr role="separator">
         </div>
     </div>
 
-    <div id="frontpage--nav-menu-container" class="flex-row font--firasans">
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-    </div>
-
-    <div id="eyecatcher--button-container">
-        <div id="eyecatcher-button-text" class="position-absolute font--firasans">A Phoenix-based FC.</div>
-        <a class="position-absolute font--firasans" href="#">EXPLORE</a>
-        <div id="lead-arrow-small"></div>
-        <div id="lead-arrow-big"></div>
-        <hr role="separator">
+    <div class="flex-shapes">
+        <div id="redTriangle"></div>
+        <div id="blackTriangle"></div>
+        <div id="triangleHider"></div>
+        <div id="greyTriangle"></div>
     </div>
 
 </div>

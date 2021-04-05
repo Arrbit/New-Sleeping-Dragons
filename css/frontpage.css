@@ -3,12 +3,25 @@
     max-width: 100vw;
     height: 100vh;
     position: relative;
-    /* test color */
-    background-color: white
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.flex-logo{
+    flex-shrink: 1;
+}
+.flex-menu{
+    flex-grow: 2;
+}
+.flex-shapes{
+    flex-shrink: 1;
 }
 
 /* Logo */
 #frontpage--logo {
+    z-index: 0;
+    min-height:400px;
     height: 55vh;
     transform: scaleX(-1);
     margin-top: 25vh;
@@ -17,14 +30,16 @@
 
 /* Title */
 #eyecatcher--title-container div {
+    z-index: 1;
     transform: translate(17vw, 30vh);
-    font-size: 500%;
+    font-size: 3em;
 }
 
 /* Nav Menu */
 #frontpage--nav-menu-container {
+    z-index: 1;
     position: absolute;
-    transform: translate(35vw, 55vh);
+    transform: translate(calc(50vw - 310px), 50vh);
 }
 
 #frontpage--nav-menu-container li {
@@ -39,15 +54,24 @@
 #frontpage--nav-menu-container li a {
     flex: auto;
     padding: 10px 20px 10px 20px;
-    border: 1px solid rgba(62, 62, 62, 0.4);
-    border-radius: 3px;
-    color: #8A0707;
-    background-color: rgba(208, 208, 208, 0.7);
+    border: 2px solid rgba(208, 208, 208, 0.3);
+    border-radius: 5px;
+    color: rgba(62, 62, 62, 1);
     text-align: center;
     text-decoration: none;
     align-items: center;
     justify-content: center;
+
 }
+
+#frontpage--nav-menu-container li a:hover{
+    box-shadow: 2px 2px 0px #8a0707;
+}
+
+#frontpage--nav-menu-container li a:active{
+    border: 2px solid rgba(62, 62, 62, 1);
+}
+
 
 /* Explore Button */
 #eyecatcher-button-text {
@@ -60,13 +84,16 @@
     border: 1px solid rgba(62, 62, 62, 1);
     border-radius: 5px;
     color: rgba(62, 62, 62, 1);
-    background-color: rgba(208, 208, 208, 0.7);
     text-align: center;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translate(calc(50vw - 45px), 90vh);
+}
+
+#eyecatcher--button-container a:hover{
+    box-shadow: 2px 2px 0px #8a0707;
 }
 
 #lead-arrow-big {
@@ -93,6 +120,7 @@
 
 /* Shapes */
 #greyTriangle {
+    z-index: 0;
     width: 0;
     height: 0;
     border-style: solid;
@@ -106,6 +134,7 @@
 }
 
 #redTriangle {
+    z-index: 0;
     width: 0;
     height: 0;
     border-style: solid;
@@ -117,6 +146,7 @@
 }
 
 #blackTriangle {
+    z-index: 0;
     width: 0;
     height: 0;
     border-style: solid;
@@ -127,6 +157,7 @@
     max-width: 10vw;
 }
 #triangleHider{
+    z-index: 0;
     width: 30vw;
     height: 50vh;
     right:0;

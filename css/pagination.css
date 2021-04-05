@@ -36,3 +36,17 @@
   /* Gray */
 
 }
+
+/** Single pagination */
+.pagination_single{
+  display: flex;
+  margin: 1em;
+}
+
+.pagination_single .center  {
+margin:auto;
+}
+
+.next, .center, .previous{
+  border-bottom: solid 1px #8A0707;
+}

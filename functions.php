@@ -2,6 +2,7 @@
 #Load Styles (Order Matters :))
 function enqueue_styles() {
     wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('tables', get_template_directory_uri() . '/css/tables.css');
     wp_enqueue_style('card', get_template_directory_uri() . '/css/card.css');
     wp_enqueue_style('pagination', get_template_directory_uri() . '/css/pagination.css');
     wp_enqueue_style('frontpage', get_template_directory_uri() . '/css/frontpage.css');

@@ -68,14 +68,33 @@ $args = array(
     ),
 );
 
-$loop = new WP_Query( $args );
+// todo if today is null get this instead (if, else)
+// Loop for a single event (see post per page) to today
+// $args = array(
+//     'meta_key'          => 'date',
+//     'orderby'           => 'meta_value',
+//     'order'             => 'ASC',
+//     'post_type'        => 'form_events', // the post type 
+//     'post_status' => 'publish',
+//     'posts_per_page'=>1,
+//     'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
+//         array(
+//             'key' => 'date', // Check the start date field
+//             'value' => date("Y-m-d"), // Set today's date (note the similar format)
+//             'type' => 'DATE', // Let WordPress know we're working with date
+//             'compare' => '>=', //get date closest to today 
+//         )
+//     ),
+// );
+
+$loop = new WP_Query( $args ); //check codex if you dont know args takes the query above and enqueessseszes all posts fitting the requirement in the array
 
 if( ($loop->have_posts())) { ?>  
   <h3 class="our_events_today"> Our Events today: </h3> 
   <?php
 }  ## This checks if the query above is empty or not :)
 
-while ( $loop->have_posts() ) : $loop->the_post(); ?>
+while ( $loop->have_posts() ) : $loop->the_post(); ?> 
 
 <div class="card card_container flex-column d-flex super-round">
     <?php if ( has_post_thumbnail() ) : ?>
@@ -103,8 +122,6 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 
 <?php endwhile; ?>
 <?php wp_reset_query(); ?>
-
-<!-- Add addtional query if above if null for the next event -->
 
 
 

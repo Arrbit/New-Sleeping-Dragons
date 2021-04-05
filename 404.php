@@ -16,6 +16,10 @@
         Error 404 Not Found
         </div>
         You are lost. We also do not know how you got here, so please go on our discord and complain. Thank you :D
+
+        <div>
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        </div>
     </div>
 </div>
 

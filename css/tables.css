@@ -16,3 +16,11 @@
 .is-style-regular a{
     color:#8A0707;
 }
+
+/** Guides list*/
+
+.list_black{
+    color: black;
+    line-height: 2.5em;
+    
+}

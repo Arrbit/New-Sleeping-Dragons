@@ -20,9 +20,9 @@
     margin-bottom: auto;
 }
 #menu-footer > li {
-list-style:none;
-display: inline;
-padding-right:20px;
+    list-style:none;
+    display: inline;
+    padding-right:20px;
 }
 
 .color--black-accent{

@@ -23,6 +23,10 @@
     border-bottom: solid 3px #8A0707;
 }
 
+.member_card .card_title {
+    margin-bottom: unset;
+}
+
 .optional{
     border-bottom: solid 3px #8A0707;
     width:5vw;
@@ -58,6 +62,31 @@ img {
     padding:10px;
 }
 
+
+.card img{
+    height: auto;
+}
+.super-round{
+    border-radius:1em;
+}
+.index_content{
+padding: 2em;
+}
+.card_title{
+    margin-bottom:1em;
+}
+.card figure{
+    margin:auto;
+    padding-top:1em;
+    padding-bottom: 1em;
+}
+
+.card figcaption{
+    font-size: 0.9em;
+    margin:auto;
+    padding-left: 1em;
+}
+
 /* Bootstrap MD Breakpoint */
 @media (min-width: 768px) { 
     .archive_title{
@@ -86,30 +115,4 @@ img {
         max-width:420px;
         margin:auto;
     }
-}
-
-
-/** too weak defined changes for index.php please define better. they will break things */
-
-.card img{
-    height: auto;
-}
-.super-round{
-    border-radius:1em;
-}
-.index_content{
-padding: 2em;
-}
-.card_title{
-    margin-bottom:1em;
-}
-.card figure{
-    margin:auto;
-    padding-top:1em;
-}
-
-.card figcaption{
-    font-size: 0.9em;
-    margin:auto;
-    padding-left: 1em;
 }

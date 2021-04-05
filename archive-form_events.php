@@ -37,7 +37,7 @@
                             <?php the_title(); ?>        
                     </div>
                     <div class="card_time">
-                        <?php echo get_post_meta(get_the_ID(), 'time', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'timemm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d/m/Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
+                        <?php echo get_post_meta(get_the_ID(), 'hh', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'mm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d/m/Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
                     </div>
                         <?php echo get_the_excerpt(); ?>
                 </div>

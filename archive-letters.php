@@ -16,7 +16,7 @@
         $wpb_all_query = new WP_Query(array(
         'post_type'=>'letters',
         'post_status'=>'publish',
-        'posts_per_page'=>5));?>
+        'posts_per_page'=>-1));?>
         <?php if ( $wpb_all_query->have_posts() ) : ?>
             <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
 

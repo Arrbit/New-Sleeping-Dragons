@@ -1,4 +1,12 @@
 <?php
+
+    function custom_frontpage_event_exist($loop){
+        if( ($loop->have_posts()) ) {   // Do we have a post, in our loop?
+            ?> Event <?php
+            }
+    }
+
+
     function custom_frontpage_event_query(){ //Checks for Events, and takes the closest to today
         $args = array(
             'meta_key'          => 'date',
@@ -17,6 +25,8 @@
             ),
         );
         $loop = new WP_Query( $args );
+
+        custom_frontpage_event_exist($loop);
 
         while ( $loop->have_posts() ) : $loop->the_post();
 
@@ -76,14 +86,6 @@
 
     function custom_frontpage_letter_query(){}
 
-    function custom_frontpage_event_exist(){
-        if( ($loop->have_posts()) ) {   // Do we have a post, in our loop?
-                //Yes 
-           
-             }else{
-                //No
-             }
-    }
           
 
     function custom_frontpage_member_query(){ 

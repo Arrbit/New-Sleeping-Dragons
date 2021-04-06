@@ -34,7 +34,7 @@
                 <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
             </div>
              <!-- If there is no event, dont display this, you need to check for 2 null querys >:( -->
-        <div class="frontpage_card_collection">
+        <div class="frontpage_card_collection card_collection">
             <?php if (!$args['value'] == null) 
                 $args = array(
                     'meta_key'          => 'date',
@@ -79,21 +79,21 @@
 
             while ( $loop->have_posts() ) : $loop->the_post(); ?> 
 
-            <div class="frontpage_card frontpage_card_container flex-column d-flex super-round">
+            <div class="frontpage_card frontpage_card_container card card_container flex-column d-flex">
             <?php if ( has_post_thumbnail() ) : ?>
             <?php the_post_thumbnail('medium_large'); ?>
             <?php else : ?>
             <img sizes="(max-width: 768px) 100vw, 768px"  width="768" height="432"   loading="lazy" class="attachment-medium_large size-medium_large wp-post-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png">
             <?php endif; ?>
-                <div class="frontpage_index_content">
-                    <div class="frontpage_card_title frontpage_event_title font--righteous">
+                <div class="frontpage_index_content index_content">
+                    <div class="frontpage_card_title card_title event_title font--righteous">
                         <?php the_title(); ?>
                     </div>
-                    <div class="frontpage_card_time">
+                    <div class="frontpage_card_time card_time">
                         <?php echo get_post_meta(get_the_ID(), 'hh', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'mm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d.m.Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
                     </div>
                     <?php the_content();?>
-                    <div class="frontpage_event_author"> by <?php echo get_post_meta(get_the_ID(), 'your_name', TRUE);?> </div>
+                    <div class="event_author"> by <?php echo get_post_meta(get_the_ID(), 'your_name', TRUE);?> </div>
                 </div>
             </div>                         
             <?php endwhile; ?>
@@ -117,93 +117,3 @@
 
 
 <?php get_footer();?>
-
-
-<style>
-
-.next_event{
-    font-size:1.2em;
-}
-
-.frontpage_card_time{
-    margin-bottom: .5em;
-}
-
-.frontpage_event_title{
-    margin-bottom: 0.2em !important;
-}
-
-.frontpage_card_collection{
-    padding-bottom:10px;
-    margin-top: 10%;
-}
-
-.frontpage_card_title{
-    margin-top:10px;
-    font-size: 1.5em;
-    width: fit-content;
-    padding-right: 10%;
-    border-bottom: solid 3px #8A0707;
-    margin-bottom: unset;
-}
-
-.frontpage_card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px; 
-  margin-bottom: 10px;
-  width: 50%;
-  min-width: 400px;
-  height: auto;
-}
-
-.frontpage_card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.card_content{
-    padding:10px;
-}
-
-.frontpage_card img{
-    height: auto;
-    border-radius: 5px 5px 0 0;
-}
-.frontpage_index_content{
-    padding: 0.5em;
-}
-.frontpage_card_title{
-    margin-top:0;
-    margin-bottom:1em;
-}
-.frontpage_card figure{
-    margin:auto;
-    padding-top:1em;
-    padding-bottom: 1em;
-}
-
-.frontpage_card figcaption{
-    font-size: 0.9em;
-    margin:auto;
-    padding-left: 1em;
-}
-
-.frontpage_event_author{
-    float:right;
-    font-weight: 500;
-}
-
-/* Bootstrap MD Breakpoint */
-@media (min-width: 768px) { 
-.card_img{
-    width: 50%;
-    margin: auto;
-    }
-
-.card_content{
-    padding-left: 20px;
-    width: 50%;
-    line-height: 2em;
-    }
-}
-</style>

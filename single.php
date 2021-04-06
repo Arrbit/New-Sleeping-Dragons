@@ -25,11 +25,10 @@
     <?php next_post_link('%link');?>
     </div>
 
-    <?php 
-	$url = htmlspecialchars($_SERVER['HTTP_REFERER']);
-	echo "    <div class='center'>
-    <a href='$url'>Back to main page</a></div>";
-    ?>
+    <div class="center">
+    <?php if (function_exists('nav_breadcrumb')) nav_breadcrumb(); ?>
+    </div>
+
 
     <div class="previous">
     <?php previous_post_link('%link');?>

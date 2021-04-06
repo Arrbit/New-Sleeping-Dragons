@@ -4,6 +4,7 @@
  * Theme Name: New Sleeping Dragons
  * Template Name: Frontpage
  */?>
+<?php include_once "php/frontpage_functions.php";?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -12,14 +13,12 @@
 <?php wp_head(); ?>
 </head>
 
-<!-- Absolute Shapes -->
-<div id="redTriangle"></div>
-<div id="blackTriangle"></div>
-<div id="triangleHider"></div>
-<div id="greyTriangle"></div>
+<?php custom_frontpage_shapes(); ?>
 
 <div> <!-- Header div, without the container, do not close -->
     <div id="frontpage_eyecatcher" class="d-flex flex-nowrap flex-column flex-lg-row">
+
+
 
         <div class="logo align-self-center">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_Transparent.png" alt="SDS-Logo">

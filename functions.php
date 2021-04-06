@@ -361,4 +361,17 @@ function wpbeginner_numeric_posts_nav() {
     echo '</ul></div>' . "\n";
  
 }
+
+add_filter( 'cf7_2_post_status_form_events', 'publish_new_form_events',10,3);
+/**
+* Function to change the post status of saved/submitted posts.
+* @param string $status the post status, default is 'draft'.
+* @param string $ckf7_key unique key to identify your form.
+* @param array $submitted_data complete set of data submitted in the form as an array of field-name=>value pairs.
+* @return string a valid post status ('publish'|'draft'|'pending'|'trash')
+*/
+function publish_new_form_events($status, $ckf7_key, $submitted_data){
+  /*The default behaviour is to save post to 'draft' status.  If you wish to change this, you can use this filter and return a valid post status: 'publish'|'draft'|'pending'|'trash'*/
+  return 'publish';
+}
 ?>

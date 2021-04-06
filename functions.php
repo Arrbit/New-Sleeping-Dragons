@@ -1,5 +1,4 @@
 <?php
-#Load Styles (Order Matters :))
 function enqueue_styles() {
     wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('tables', get_template_directory_uri() . '/css/tables.css');
@@ -15,6 +14,9 @@ wp_enqueue_script(
     'bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', 
     array( 'jquery' ),
 );
+
+include get_template_directory() . '/php/events.php';
+
 
 #Define menus but they still need to be called somewhere else :)
 function register_my_menus() {

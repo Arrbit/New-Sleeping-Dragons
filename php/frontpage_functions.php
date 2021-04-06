@@ -36,6 +36,8 @@
                 <?php else : ?>
                     <img width="300" height="169" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy">
                 <?php endif; ?>
+                <?php if (date('Y-m-d') == date('Y-m-d', strtotime(get_post_meta(get_the_ID(), 'date', TRUE)))) {?> <div class="today"> Today </div> <?php } ?>
+
                 <div class="frontpage_index_content index_content">
                     <div class="frontpage_card_title card_title event_title font--righteous">
                         <?php the_title(); ?>

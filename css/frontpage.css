@@ -179,9 +179,13 @@
   transition: 0.3s;
   border-radius: 5px; 
   margin-bottom: 10px;
-  max-width: 768px;
-  height: auto;
+  width: 150px;
+  height: 169px;
 }
+
+.frontpage_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
 
 .frontpage_index_content{
     padding: 0.5em !important;

@@ -1,7 +1,6 @@
 <?php
 function c_event_card(){ ?>
-
-<a class="d-flex" href="<?php the_permalink();?>">
+    <a class="d-flex" href="<?php the_permalink();?>">
         <div class="card card_container flex-sm-column flex-md-row d-flex">
             <div class="card_img">
             <?php if ( has_post_thumbnail() ) : ?>
@@ -11,7 +10,6 @@ function c_event_card(){ ?>
                         class="attachment-medium_large size-medium_large wp-post-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png">
                 <?php endif; ?>
                 <?php if (date('Y-m-d') == date('Y-m-d', strtotime(get_post_meta(get_the_ID(), 'date', TRUE)))) {?> <div class="today"> Today </div> <?php } ?>
-
             </div>
                 
             <div class="card_content">
@@ -25,7 +23,5 @@ function c_event_card(){ ?>
             </div>
         </div>
     </a>
-
 <?php
-
 }

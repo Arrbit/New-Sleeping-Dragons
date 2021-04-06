@@ -12,7 +12,7 @@
 
 .frontpage_center{
     flex-grow:1;
-
+    margin-top: 15%;
 }
 
 .frontpage_footer{
@@ -24,15 +24,13 @@
     margin: auto;
 }
 
-
 /* Shapes */
 #greyTriangle {
     z-index: 0;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 50vh 35vw 50vh 0;
-    /* Old Values : 575px 1400px 575px 0; */
+    border-width: 0vh 125vw 40vh 0;
     border-color: transparent #D0D0D0 transparent;
     position: absolute;
     top: 0;
@@ -45,10 +43,9 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 40vw 15vh 0 40vh;
+    border-width: 30vw 80vh 0 40vh;
     border-color: #8A0707 transparent transparent;
     position: absolute;
-    top: 6%;
     right: calc(4% - 1vw);
 }
 
@@ -57,7 +54,7 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 40vw 15vh 0 40vh;
+    border-width: 30vw 40vh 0 40vh;
     border-color: #3E3E3E transparent transparent;
     position: absolute;
     right: calc(3% - 1vw);
@@ -72,9 +69,55 @@
     position: absolute;
     background-color: white;
 }
+@media (min-width:992px){
+    #greyTriangle {
+        z-index: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 50vh 35vw 50vh 0;
+        border-color: transparent #D0D0D0 transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: -50px;
+    }
 
+    #redTriangle {
+        z-index: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 40vw 15vh 0 40vh;
+        border-color: #8A0707 transparent transparent;
+        position: absolute;
+        top: 6%;
+        right: calc(4% - 1vw);
+    }
 
-/** Menu */
+    #blackTriangle {
+        z-index: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 40vw 15vh 0 40vh;
+        border-color: #3E3E3E transparent transparent;
+        position: absolute;
+        right: calc(3% - 1vw);
+        max-width: 10vw;
+    }
+    #triangleHider{
+        z-index: 0;
+        width: 30vw;
+        height: 50vh;
+        right:0;
+        top: 50%;
+        position: absolute;
+        background-color: white;
+    }
+}
+
+/* Menu */
 
 .frontpage_menu{
     align-items: center;
@@ -113,7 +156,7 @@
     color: #8a0707;
 }
 
-/**  */
+/* Arrow Thingy  */
 
 .updown {
     animation: MoveUpDown 1s linear infinite;

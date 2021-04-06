@@ -4,30 +4,41 @@
  * Theme Name: New Sleeping Dragons
  * Template Name: Lists all Form_Events
  */?>
- <?php get_header();?>
-<div class="archive_title flex-row d-flex">
+  <?php get_header();?>
+  <div class="archive_title flex-row d-flex">
     <div class="archive_title_always font--righteous">
-        <?php echo get_the_title();?>
+        Our Events <!-- Needs to be hardcoded, since Title gives issues on paged version-->
     </div>
     <div class="optional"></div>
 </div>
 <div class="card_collection">
-<?php 
-        $wpb_all_query = new WP_Query(array(
-        'post_type'=>'form_events',
-        'post_status'=>'publish',
-        'posts_per_page'=>5));?>
-        <?php if ( $wpb_all_query->have_posts() ) : ?>
-            <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+ 
+ <?php 
+ 
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-           <?php c_event_card(); ?>
+$data= new WP_Query(array(
+    'meta_key'          => 'date',
+    'orderby'           => 'meta_value',
+    'order'             => 'DESC',
+    'post_type'        => 'form_events', // the post type 
+    'posts_per_page' => 5, // post per page
+    'paged' => $paged,
+    'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
+        array(
+            'key' => 'date', // Check the start date field
+            'type' => 'DATE', // Let WordPress know we're working with date
+        )
+    )
+    )
+);
 
-
-            <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-
-        <?php else : ?>
-        <p><?php _e( 'Sorry, no posts matched your criteria. :(' ); ?></p>
-        <?php endif; ?>
+if($data->have_posts()) :
+    while($data->have_posts())  : $data->the_post();
+    c_event_card();
+    endwhile; ?>    
+    <?php wpbeginner_numeric_posts_nav(); ?>
+<?php endif; ?>
+<?php wp_reset_postdata();?>
 </div>
 <?php get_footer();?>

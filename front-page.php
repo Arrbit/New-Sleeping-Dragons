@@ -53,7 +53,7 @@
         <div class="fp_img">
             <img
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg"
-                alt="SDS-GroupPic">
+                alt="SDS-GroupPic" id="groupPic" onclick="changeImage()"/>
         </div>
 
         <div>
@@ -77,3 +77,17 @@
     </div>
 
 <?php get_footer();?>
+
+<script language="javascript">
+    function changeImage() {
+
+        if (document.getElementById("groupPic").src == "<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg") 
+        {
+            document.getElementById("groupPic").src = "<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company_names.jpg";
+        }
+        else 
+        {
+            document.getElementById("groupPic").src = "<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg";
+        }
+    }
+</script>

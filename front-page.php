@@ -49,7 +49,7 @@
     </div>
 
     <div class="frontpage_content container d-flex flex-column">
-        
+
     <!-- Group Pic -->
         <div class="fp_img">
             <img
@@ -60,7 +60,7 @@
 
     <!-- Widget -->
         <div class="fp_news member_card  font--righteous">
-            <div class="card card_container flex-row d-flex justify-content-center">
+            <div class="flex-row d-flex justify-content-center">
                 <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>
             </div>
         </div>

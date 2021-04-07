@@ -177,6 +177,16 @@
   .frontpage_content {
     margin-top: 70px;
   }
+  
+  .frontpage_content .member_card {
+      max-width:none;
+  }
+  .widgetNews {
+      color:#3E3E3E;
+  }
+  .widgetNews:hover{
+      color:black;
+  }
 
   .fp_img img{
     width: 100%;

@@ -45,7 +45,7 @@ function widget_init() {
     register_sidebar(
       array(
         'name' => 'Frontpage News',
-        'before_widget' => '<div class="widgetNews">',
+        'before_widget' => '<div class="widgetNews card card_container">',
         'after_widget' => '</div>',
         'before_title' => '',
         'after_title' => '',

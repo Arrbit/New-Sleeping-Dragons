@@ -44,8 +44,8 @@ function widget_init() {
 
     register_sidebar(
       array(
-        'name' => 'Header',
-        'before_widget' => '<div class = "header">',
+        'name' => 'Frontpage',
+        'before_widget' => '<div class = "fp_content_widget">',
         'after_widget' => '</div>',
         'before_title' => '',
         'after_title' => '',

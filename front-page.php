@@ -51,23 +51,24 @@
     <div class="frontpage_content container d-flex flex-column" style="margin-top: 50px;">
 
         <div>
-        <img
-            src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg"
-            alt="SDS-GroupPic"></a>
+            <img
+                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg"
+                alt="SDS-GroupPic"></a>
         </div>
 
-        <!--<div> Widget
-        </div> -->
+        <div>
+            <?php if ( dynamic_sidebar('fp_content_widget') ) : else : endif; ?>
+        </div>
 
-    <div class="fp_new_collection d-flex flex-column flex-lg-row justify-content-center">
-        <div>Our Newest Letter: 
-        <?php custom_frontpage_letter_query(); ?>
-        </div> 
+        <div class="fp_new_collection d-flex flex-column flex-lg-row justify-content-center">
+            <div>Our Newest Letter: 
+            <?php custom_frontpage_letter_query(); ?>
+            </div> 
 
-        <div>Our Newest Member: 
-        <?php custom_frontpage_member_query(); ?>
-        </div> 
-    </div>
+            <div>Our Newest Member: 
+            <?php custom_frontpage_member_query(); ?>
+            </div> 
+        </div>
             
         <div class="fp_content"> 
             <?php echo get_the_content(); ?>

@@ -20,7 +20,7 @@
             ),
             'orderby'           => 'meta_value',
             'order'             => 'ASC',
-            'post_type'        => 'form_events', // the post type 
+            'post_type'        => 'events', // the post type 
             'post_status' => 'publish',
             'posts_per_page'=>1,
             'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
@@ -46,7 +46,7 @@
                 'time-mm' => 'ASC',
             ),
             'order'       => 'DESC',
-            'post_type'   => 'form_events',
+            'post_type'   => 'events',
             'post_status' => 'publish',
              'meta_query' => array( 
                 'istoday' => array(
@@ -93,7 +93,7 @@
             'meta_key'          => 'date',
             'orderby'           => 'meta_value',
             'order'             => 'ASC',
-            'post_type'        => 'form_events', // the post type 
+            'post_type'        => 'events', // the post type 
             'post_status' => 'publish',
             'posts_per_page'=>1,
             'meta_query' => array( // WordPress has all the results, now, return only the events after today's date

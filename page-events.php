@@ -23,7 +23,7 @@
                 'time-mm' => 'ASC',
             ),
             'order'             => 'DESC',
-            'post_type'        => 'form_events', // the post type 
+            'post_type'        => 'events', // the post type 
             'post_status' => 'publish',
             'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
                 'datecheck-bigger' =>array(
@@ -57,7 +57,7 @@
         'meta_key'          => 'date',
         'orderby'           => 'meta_value',
         'order'             => 'ASC',
-        'post_type'        => 'form_events', // the post type 
+        'post_type'        => 'events', // the post type 
         'post_status' => 'publish',
         'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
             array(

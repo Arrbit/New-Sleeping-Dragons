@@ -7,6 +7,11 @@ Using [Bootstrap 5 as helpers](https://getbootstrap.com/) for mobile and more i 
 
 ### Recommended Plugins
 - [WP Featherlight](https://wordpress.org/plugins/wp-featherlight/)
+- UpdraftPlus - Backup/Restore
+- Yoast SEO
+- W3 Total Cache
+
+
 
 #### Pugins for Events
 - Contact Form 7

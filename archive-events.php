@@ -23,7 +23,7 @@ $data= new WP_Query(array(
         'time-hh' => 'ASC',
         'time-mm' => 'ASC',
     ),
-    'post_type'        => 'form_events', // the post type 
+    'post_type'        => 'events', // the post type 
     'posts_per_page' => 5, // post per page
     'paged' => $paged,
     'meta_query' => array( // WordPress has all the results, now, return only the events after today's date

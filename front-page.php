@@ -80,7 +80,6 @@
             <?php custom_frontpage_member_query(); ?>
             </div>
         </div>
-        <?php custom_frontpage_event_today() ?>
     <!-- Content -->        
         <div class="fp_content"> 
             <?php echo get_the_content(); ?>

@@ -64,7 +64,6 @@
     }
 
     function custom_frontpage_card(){ ?>
-
         <a class="d-flex" href="<?php the_permalink();?>">
             <div class="frontpage_card frontpage_card_container card card_container flex-row d-flex">
                 <?php if ( has_post_thumbnail() ) : ?>
@@ -82,7 +81,25 @@
         </a>       
     <?php
     }
+ 
+    function custom_fp_card(){ ?>
+        <a class="member_card" href="<?php the_permalink();?>">
+            <div class="card card_container flex-column d-flex">
+                <div class="card_img member_card_img top-round">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                    <?php the_post_thumbnail('medium_large'); ?>
+                    <?php else : ?>
+                    <img sizes="(max-width: 768px) 100vw, 768px"  width="768" height="432"   loading="lazy" class="attachment-medium_large size-medium_large wp-post-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png">
+                    <?php endif; ?>
+                </div>
 
+                <div class="card_title font--righteous">
+                    <?php the_title(); ?>
+                </div>
+            </div>
+        </a>
+    <?php
+    }
 
     function custom_frontpage_letter_query(){
         $args = array(
@@ -94,7 +111,7 @@
 
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-            <?php custom_frontpage_card(); ?>
+            <?php custom_fp_card(); ?>
 
         <?php endwhile; ?>
         <?php wp_reset_query(); ?>
@@ -112,7 +129,7 @@
 
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-            <?php custom_frontpage_card(); ?>
+            <?php custom_fp_card(); ?>
 
         <?php endwhile; ?>
         <?php wp_reset_query(); ?>

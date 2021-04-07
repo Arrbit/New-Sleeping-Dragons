@@ -60,7 +60,7 @@
 
     <!-- Widget -->
         <div class="fp_news member_card  font--righteous">
-            <div class="flex-row d-flex justify-content-center">
+            <div class="d-flex flex-column flex-lg-row card_collection">
                 <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>
             </div>
         </div>

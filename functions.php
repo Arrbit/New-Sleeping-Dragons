@@ -47,8 +47,8 @@ function widget_init() {
         'name' => 'Frontpage News',
         'before_widget' => '<div class="widgetNews card card_container">',
         'after_widget' => '</div>',
-        'before_title' => '',
-        'after_title' => '',
+        'before_title' => '<div class="card_title">',
+        'after_title' => '</div>',
       ));
 
     }

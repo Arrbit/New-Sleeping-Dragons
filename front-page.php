@@ -51,10 +51,10 @@
     <div class="frontpage_content container d-flex flex-column">
 
     <!-- Group Pic -->
-        <div class="fp_img">
+        <div class="fp_img super-round slight-shadow-hover">
             <img
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg"
-                alt="SDS-GroupPic" id="groupPic" onclick="changeImage()"/>
+                alt="SDS-GroupPic" class="super-round" id="groupPic" onclick="changeImage()"/>
                 <div class="today"> Click me! </div> 
         </div>
 

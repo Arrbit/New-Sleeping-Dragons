@@ -51,7 +51,6 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-
 .card_img img{
     height:auto;
     width: 100%;
@@ -69,9 +68,6 @@
 
 .card img{
     height: auto;
-}
-.super-round{
-    border-radius:1em;
 }
 .index_content{
 padding: 2em;

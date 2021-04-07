@@ -374,4 +374,8 @@ function publish_new_form_events($status, $ckf7_key, $submitted_data){
   /*The default behaviour is to save post to 'draft' status.  If you wish to change this, you can use this filter and return a valid post status: 'publish'|'draft'|'pending'|'trash'*/
   return 'publish';
 }
+
+/** Theme needs to support Featured Image / Thumbnails */
+add_theme_support( 'post-thumbnails' );
+
 ?>

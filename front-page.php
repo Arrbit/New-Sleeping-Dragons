@@ -56,11 +56,11 @@
                 alt="SDS-GroupPic" id="groupPic" onclick="changeImage()"/>
         </div>
 
-        <div>
+        <div class="fp_news d-flex flex-row justify-content-center font--righteous">
             <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>
         </div>
 
-        <div class="fp_new_collection d-flex flex-column flex-lg-row justify-content-center">
+        <div class="fp_new_collection d-flex flex-column flex-lg-row justify-content-center font--righteous">
             <div>Our Newest Letter: 
             <?php custom_frontpage_letter_query(); ?>
             </div> 

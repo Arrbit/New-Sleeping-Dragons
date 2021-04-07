@@ -17,7 +17,7 @@
 <?php custom_frontpage_shapes(); ?>
 
 <div> <!-- Header div, without the container, do not close -->
-    <div id="frontpage_eyecatcher" class="d-flex flex-nowrap flex-column flex-lg-row">
+    <div class="frontpage_eyecatcher d-flex flex-nowrap flex-column flex-lg-row">
 
         <div class="logo align-self-center">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_Transparent.png"
@@ -25,11 +25,11 @@
         </div>
 
         <div class="frontpage_center align-self-center flex-column d-flex">
-            <h1 class="font--righteous frontpage-title">
+            <h1 class="frontpage_title font--righteous">
                 <?php echo get_bloginfo()?>
             </h1>
             
-            <div class="d-flex flex-row frontpage_menu  font--firasans">
+            <div class="frontpage_menu d-flex flex-row font--firasans">
 
                 <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
             </div>
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <div class="frontpage_footer d-flex flex-column">
+    <div class="eyecatcher_footer d-flex flex-column">
         <div class="fp_img_text font--firasans">A Phoenix-based FC.</div>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down updown"
             viewBox="0 0 16 16">
@@ -71,12 +71,12 @@
 
 
     <!-- Newest Letter & Member -->
-        <div class="fp_new_collection d-flex flex-column flex-lg-row justify-content-center font--righteous">
-            <div>Our Newest Letter: 
+        <div class="fp_new_collection d-flex flex-column flex-lg-row justify-content-center font--firasans">
+            <div>Our Newest Letter 
             <?php custom_frontpage_letter_query(); ?>
             </div> 
 
-            <div>Our Newest Member: 
+            <div>Our Newest Member 
             <?php custom_frontpage_member_query(); ?>
             </div>
         </div>

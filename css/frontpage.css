@@ -144,7 +144,7 @@
 .frontpage_index_content{
     padding: 0.5em !important;
     overflow-y: hidden;
-    font-size:0.9em;
+    font-size:1em;
     font-family: 'FiraSans' !important;
 }
 
@@ -154,7 +154,7 @@
     font-size:1.1em;
 }
 .frontpage_event_author{
-    transform: translate(-10px, -196px);
+    padding-top:20px;
 }
 
 /* Arrow Thingy  */
@@ -204,42 +204,6 @@
     text-align: center;
     color: white;
   }
-
-  /* .fp_news{
-      margin-top:20px;
-      text-align: center;
-  }
-
-  .fp_new_collection{
-      margin-top:20px;
-  }
-  .fp_new_collection:second-child{
-      margin-left: 100px;
-  }
-
-  .widgetNews{
-    font-size: 1.1em;
-    flex: 1;
-    max-width:1024px;
-    min-width: 600px;
-    border-left: 1px solid #424242;
-    border-left: 1px solid #424242;
-    border-top: 1px solid #424242;
-    border-bottom: 1px solid #424242;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%);
-  }
-
-  .widgetNews:last-child {
-    border-right: 1px solid #424242;
-  }
-  .widgetNews .card{
-    border:none;
-    margin-bottom: 0px !important;
-  }
-  .widgetNews:hover{
-    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 60%);
-  } */
-
 
 
   @media (min-width:992px){

@@ -2,7 +2,7 @@
 
     function custom_frontpage_event_exist($loop){
         if( ($loop->have_posts()) ) {   // Do we have a post, in our loop?
-            ?> Event <?php
+            ?> Next Event <?php
             }
     }
 
@@ -55,7 +55,8 @@
                     <div class="frontpage_card_time card_time">
                         <?php echo get_post_meta(get_the_ID(), 'hh', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'mm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d.m.Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
                     </div>
-                    <?php the_content();?>
+
+                    <?php echo substr(get_the_excerpt(), 0,300)." […]";?>
                     <div class="event_author frontpage_event_author"> by <?php echo get_post_meta(get_the_ID(), 'your_name', TRUE);?> </div>
                 </div>
             </div>

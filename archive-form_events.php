@@ -18,17 +18,25 @@
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $data= new WP_Query(array(
-    'meta_key'          => 'date',
-    'orderby'           => 'meta_value',
-    'order'             => 'DESC',
+    'orderby' => array(
+        'date' => 'DESC',
+        'time-hh' => 'ASC',
+        'time-mm' => 'ASC',
+    ),
     'post_type'        => 'form_events', // the post type 
     'posts_per_page' => 5, // post per page
     'paged' => $paged,
     'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
-        array(
+        'date' => array(
             'key' => 'date', // Check the start date field
             'type' => 'DATE', // Let WordPress know we're working with date
-        )
+        ),
+        'time-hh' =>array(
+        'key' => 'hh', 
+        ),
+        'time-mm' =>array(
+        'key' => 'mm', 
+        ),
     )
     )
 );

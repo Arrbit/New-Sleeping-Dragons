@@ -194,22 +194,6 @@
     margin-top:0;
     margin-bottom:1em;
 }
-
-
-/* Event Display Bootstrap MD Breakpoint */
-@media (min-width: 768px) { 
-.card_img{
-    width: 50%;
-    margin: auto;
-    }
-
-.card_content{
-    padding-left: 20px;
-    width: 50%;
-    line-height: 2em;
-    }
-}
-
 /* Arrow Thingy  */
 
 .updown {

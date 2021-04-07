@@ -50,3 +50,19 @@ margin:auto;
 .next, .center, .previous{
   border-bottom: solid 1px #8A0707;
 }
+
+/** Archive */
+.no_symbol ul,
+.no_symbol li a,
+.no_symbol li a:hover,
+.no_symbol li.active a,
+.no_symbol li.disabled {
+    list-style-type: none;
+    text-decoration:none;
+}
+.archive{
+  margin: 1em;
+}
+.archive li a{
+ padding: 1em;
+}

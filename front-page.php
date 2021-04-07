@@ -50,21 +50,26 @@
 
     <div class="frontpage_content container" style="margin-top: 50px;">
 
-        <!-- <div> Widget
+
+        <!-- <div> FC Picture Clickable
         </div>
 
-        <div> Newest Letter 
+        <div> Widget
         </div> -->
 
-        <div>
-        <?php custom_frontpage_member_query(); ?>
-        </div> 
-        
+        <div class="fp_new_collection">
+
+            <!-- <div> Newest Letter 
+            </div>  -->
+
+            <div>
+            <?php custom_frontpage_member_query(); ?>
+            </div> 
+        </div>
+            
         <div class="fp_content"> 
             <?php echo get_the_content(); ?>
         </div> 
-
-
 
     </div>
 

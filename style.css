@@ -30,6 +30,11 @@ Version: 0.1
     font-family: FiraSans;
 }
 
+.color--black-accent {
+  color: #3e3e3e;
+}
+
+
 body{ height:100vh; margin:0; }
 
 body{ 

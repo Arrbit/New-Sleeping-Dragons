@@ -25,7 +25,7 @@
         <a href="/"><?php echo get_bloginfo()?></a>
     </div>
 
-    <div class="logo-container flexible">
+    <div class="logo-container">
         <a href="/">
             <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png"alt="SDS-Logo">
         </a>
@@ -42,6 +42,10 @@
 <style>
 
 /* Big DIVs */
+.logo {
+    height: 110px !important;
+}
+
 .wrap {
     position: relative;
     text-align: center;
@@ -98,25 +102,7 @@
     margin-bottom: 1%;
     font-size: 1.5em;
 }
-
-/* Logo */
-.logo-container {
-    position: absolute;
-    transform: scale(0.8);
-    right: 0;
-    padding-top: 60px;
-    opacity: 80%;
-}
-
-.logo {
-    width: 5;
-    height: 110px !important;
-}
-
 /* Color */
-.color--black-accent {
-    color: #3e3e3e;
-}
 
 a {
     color: #3e3e3e;

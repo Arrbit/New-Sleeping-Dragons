@@ -79,15 +79,24 @@
 <?php get_footer();?>
 
 <script language="javascript">
+var images = [
+'<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg',
+'<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company_names.jpg'
+];
+
     function changeImage() {
 
-        if (document.getElementById("groupPic").src == "<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg") 
+        if (document.getElementById("groupPic").src == images[0]) 
         {
-            document.getElementById("groupPic").src = "<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company_names.jpg";
+            document.getElementById("groupPic").src = images[1];
         }
         else 
         {
-            document.getElementById("groupPic").src = "<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg";
+            document.getElementById("groupPic").src = images[0];
         }
     }
+
+    var img = new Image();
+    img.src = images[1];
+    img.onload=function(){$(img);}
 </script>

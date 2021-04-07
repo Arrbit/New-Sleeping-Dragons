@@ -195,6 +195,12 @@
     margin-top:0;
     margin-bottom:1em;
 }
+
+.fp_img {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
 /* Arrow Thingy  */
 
 .updown {
@@ -216,6 +222,7 @@
     margin-top: 50px;
   }
   .fp_img img{
+      
     width: 100%;
     aspect-ratio: auto;
   }

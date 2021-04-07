@@ -54,6 +54,7 @@
             <img
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg"
                 alt="SDS-GroupPic" id="groupPic" onclick="changeImage()"/>
+                <div class="today"> Click me! </div> 
         </div>
 
         <div>

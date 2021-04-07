@@ -51,6 +51,14 @@
 
     <div class="frontpage_content container d-flex flex-column">
 
+        <!-- Widget -->
+        <div class="fp_news_text card_title font--firasans">News</div>
+        <div class="fp_news member_card  font--righteous">
+            <div class="d-flex flex-column flex-lg-row card_collection" style="margin-bottom:20px">
+                <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>
+            </div>
+        </div>
+
     <!-- Group Pic -->
         <div class="fp_img super-round slight-shadow-hover">
             <img
@@ -58,15 +66,9 @@
                 alt="SDS-GroupPic" class="super-round" id="groupPic" onclick="changeImage()"/>
                 <div class="today"> Click me! </div> 
         </div>
-        <div class="fp_img_text card font--firasans">Our latest company photo! December 2020. Feels like a long time ago.</div> 
+        <div class="fp_img_text font--firasans" style="margin-top:10px;">Our latest company photo! December 2020. Feels like a long time ago.</div> 
 
-    <!-- Widget -->
-        <div class="fp_news_text card_title font--firasans">Some of our favorites memories from over the years</div>
-        <div class="fp_news member_card  font--righteous">
-            <div class="d-flex flex-column flex-lg-row card_collection">
-                <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>
-            </div>
-        </div>
+
 
     <!-- Newest Letter & Member -->
         <div class="fp_new_collection d-flex flex-column flex-lg-row justify-content-center font--righteous">

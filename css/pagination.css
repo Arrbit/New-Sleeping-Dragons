@@ -47,9 +47,6 @@
 margin:auto;
 }
 
-.next, .center, .previous{
-  border-bottom: solid 1px #8A0707;
-}
 
 /** Archive */
 .no_symbol ul,

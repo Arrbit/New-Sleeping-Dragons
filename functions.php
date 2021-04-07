@@ -44,8 +44,8 @@ function widget_init() {
 
     register_sidebar(
       array(
-        'name' => 'Frontpage',
-        'before_widget' => '<div class = "fp_content_widget">',
+        'name' => 'Frontpage News',
+        'before_widget' => '<div>',
         'after_widget' => '</div>',
         'before_title' => '',
         'after_title' => '',

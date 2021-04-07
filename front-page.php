@@ -57,7 +57,7 @@
         </div>
 
         <div>
-            <?php if ( dynamic_sidebar('fp_content_widget') ) : else : endif; ?>
+            <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>
         </div>
 
         <div class="fp_new_collection d-flex flex-column flex-lg-row justify-content-center">

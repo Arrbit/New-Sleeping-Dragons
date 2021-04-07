@@ -189,6 +189,7 @@
 
 .frontpage_index_content{
     padding: 0.5em !important;
+    overflow-y: hidden;
 }
 .frontpage_card_title{
     margin-top:0;

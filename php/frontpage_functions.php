@@ -84,25 +84,39 @@
     }
 
 
-    function custom_frontpage_letter_query(){}
+    function custom_frontpage_letter_query(){
+        $args = array(
+            'post_type'   => 'letters', // the post type members
+            'post_status' => 'publish',
+            'posts_per_page'=>1,
+        );
+        $loop = new WP_Query( $args );
 
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+            <?php custom_frontpage_card(); ?>
+
+        <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
+        <?php
+    }
           
 
     function custom_frontpage_member_query(){ 
         $args = array(
-        'post_type'   => 'members', // the post type members
-        'post_status' => 'publish',
-        'posts_per_page'=>1,
-    );
-    $loop = new WP_Query( $args );
+            'post_type'   => 'members', // the post type members
+            'post_status' => 'publish',
+            'posts_per_page'=>1,
+        );
+        $loop = new WP_Query( $args );
 
-    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-        <?php custom_frontpage_card(); ?>
+            <?php custom_frontpage_card(); ?>
 
-    <?php endwhile; ?>
-    <?php wp_reset_query(); ?>
-    <?php
+        <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
+        <?php
     }
 
     function custom_frontpage_shapes(){ ?>

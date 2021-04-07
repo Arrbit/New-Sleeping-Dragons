@@ -212,17 +212,21 @@
   .fp_news_text{
         align-self: center;
         width: fit-content;
-        margin-top:50px;
+        margin-top:60px;
         padding-right: 0 !important;
   }
 
 
   .fp_new_collection{
     margin-top:30px;
-    font-size:2em;
+    font-size: 2em;
   }
   .fp_new_collection .card_title{
     font-size: 1em;
+  }
+
+  .fp_content{
+      margin-top: 30px;
   }
 
 

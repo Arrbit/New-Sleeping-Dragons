@@ -204,6 +204,25 @@
     text-align: center;
     color: white;
   }
+  .fp_img_text{
+      align-self: center;
+      width: fit-content;
+      margin-top: -20px;
+  }
+  .fp_news_text{
+        align-self: center;
+        width: fit-content;
+        margin-top:50px;
+  }
+
+
+  .fp_new_collection{
+    margin-top:30px;
+    font-size:2em;
+  }
+  .fp_new_collection .card_title{
+    font-size: 1em;
+  }
 
 
   @media (min-width:992px){

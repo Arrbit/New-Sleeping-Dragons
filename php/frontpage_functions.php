@@ -4,6 +4,9 @@
         if( ($loop->have_posts()) ) {   // Do we have a post, in our loop?
             ?> Next Event <?php
             }
+        else{
+            ?> <?php
+        }
     }
 
 

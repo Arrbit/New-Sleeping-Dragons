@@ -41,6 +41,7 @@
     </div>
 
     <div class="frontpage_footer d-flex flex-column">
+        <div class="fp_img_text font--firasans">A Phoenix-based FC.</div>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down updown"
             viewBox="0 0 16 16">
             <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
@@ -57,8 +58,10 @@
                 alt="SDS-GroupPic" class="super-round" id="groupPic" onclick="changeImage()"/>
                 <div class="today"> Click me! </div> 
         </div>
+        <div class="fp_img_text card font--firasans">Our latest company photo! December 2020. Feels like a long time ago.</div> 
 
     <!-- Widget -->
+        <div class="fp_news_text font--firasans">Some of our favorites memories from over the years</div>
         <div class="fp_news member_card  font--righteous">
             <div class="d-flex flex-column flex-lg-row card_collection">
                 <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>

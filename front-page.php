@@ -61,7 +61,7 @@
         <div class="fp_img_text card font--firasans">Our latest company photo! December 2020. Feels like a long time ago.</div> 
 
     <!-- Widget -->
-        <div class="fp_news_text font--firasans">Some of our favorites memories from over the years</div>
+        <div class="fp_news_text card_title font--firasans">Some of our favorites memories from over the years</div>
         <div class="fp_news member_card  font--righteous">
             <div class="d-flex flex-column flex-lg-row card_collection">
                 <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>

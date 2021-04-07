@@ -53,7 +53,7 @@
         <div>
             <img
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg"
-                alt="SDS-GroupPic"></a>
+                alt="SDS-GroupPic">
         </div>
 
         <div>

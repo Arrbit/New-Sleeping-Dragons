@@ -17,6 +17,9 @@
         </div>
         <?php the_content();?>
 
+        <?php render_pagination();  ?>
+
+
         
     </div>
 </div>

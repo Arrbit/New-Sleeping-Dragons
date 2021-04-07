@@ -8,52 +8,61 @@ Version: 0.1
 */
 
 @font-face {
-   font-family: Righteous;
-   src: local('Righteous'), local('Righteous-Regular'),
-       url('./assets/fonts/Righteous_Regular/righteous-v8-latin-regular.woff2') format('woff2'),
-       url('./assets/fonts/Righteous_Regular/righteous-v8-latin-regular.woff') format('woff');
+  font-family: Righteous;
+  src: local('Righteous'), local('Righteous-Regular'),
+    url('./assets/fonts/Righteous_Regular/righteous-v8-latin-regular.woff2') format('woff2'),
+    url('./assets/fonts/Righteous_Regular/righteous-v8-latin-regular.woff') format('woff');
 }
 
 @font-face {
   font-family: FiraSans;
   src: local('FiraSans'), local('FiraSans-Regular'),
-      url('./assets/fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype');
+    url('./assets/fonts/Fira_Sans/FiraSans-Regular.ttf') format('truetype');
 }
 
-.font--righteous
-{
-    font-family: Righteous;
+.font--righteous {
+  font-family: Righteous;
 }
 
-.font--firasans
-{
-    font-family: FiraSans;
+.font--firasans {
+  font-family: FiraSans;
 }
 
 .color--black-accent {
   color: #3e3e3e;
 }
 
-.super-round{
-  border-radius:1em;
+.super-round {
+  border-radius: 1em;
 }
 
-.slight-shadow-hover{
-  box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.4);
+.slight-shadow-hover {
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 
-.slight-shadow-hover:hover{
-  box-shadow: 8px 8px 16px 0 rgba(0,0,0,0.6);
+.slight-shadow-hover:hover {
+  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
 
-body{ height:100vh; margin:0; }
-
-body{ 
-  display:flex; 
-  flex-direction:column; 
+body {
+  height: 100vh;
+  margin: 0;
 }
 
-footer{
-  margin-top:auto; 
-  z-index:1;
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card a,
+.fp_content a,
+.next a,
+.center a,
+.previous a {
+  color: #8A0707;
+}
+
+footer {
+  margin-top: auto;
+  z-index: 1;
 }

@@ -5,7 +5,6 @@
  * Template Name: Lists all Members
  */
 
-
 /** Ajax Implementation to load more members check functions.php and core.js **/
 
 wp_register_script( 'core-js', get_template_directory_uri() . '/js/core.js');
@@ -14,8 +13,7 @@ wp_enqueue_script( 'core-js' );
 wp_localize_script( 'core-js', 'ajax_posts', array(
     'ajaxurl' => admin_url( 'admin-ajax.php' ),
     'noposts' => __('No older posts found'),
-  ));	
-?>
+  ));?>
 
 <?php get_header();?>
  
@@ -38,19 +36,19 @@ wp_localize_script( 'core-js', 'ajax_posts', array(
     while ($loop->have_posts()) : $loop->the_post();?>
 
     <a class="member_card" href="<?php the_permalink();?>">
-    <div class="card card_container flex-column d-flex">
-        <div class="card_img member_card_img top-round">
-        <?php if ( has_post_thumbnail() ) : ?>
-        <?php the_post_thumbnail('medium_large'); ?>
-        <?php else : ?>
-        <img sizes="(max-width: 768px) 100vw, 768px"  width="768" height="432"   loading="lazy" class="attachment-medium_large size-medium_large wp-post-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png">
-        <?php endif; ?>
-        </div>
+        <div class="card card_container flex-column d-flex">
+            <div class="card_img member_card_img top-round">
+                <?php if ( has_post_thumbnail() ) : ?>
+                <?php the_post_thumbnail('medium_large'); ?>
+                <?php else : ?>
+                <img sizes="(max-width: 768px) 100vw, 768px"  width="768" height="432"   loading="lazy" class="attachment-medium_large size-medium_large wp-post-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png">
+                <?php endif; ?>
+            </div>
 
-    <div class="card_title font--righteous">
-    <?php the_title(); ?>
-    </div>
-    </div>
+            <div class="card_title font--righteous">
+            <?php the_title(); ?>
+            </div>
+        </div>
     </a>
     <?php endwhile; ?> 
     <?php wp_reset_postdata(); ?>

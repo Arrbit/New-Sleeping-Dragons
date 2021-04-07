@@ -109,7 +109,7 @@ var images = [
 
     var img = new Image();
     img.src = images[1];
-    img.onload=function(){$(img);}
+    img.onload=function(){jQuery(img);}
 </script>
 
 

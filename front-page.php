@@ -48,9 +48,9 @@
         <hr role="separator">
     </div>
 
-    <div class="frontpage_content container d-flex flex-column" style="margin-top: 50px;">
+    <div class="frontpage_content container d-flex flex-column">
 
-        <div>
+        <div class="fp_img">
             <img
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg"
                 alt="SDS-GroupPic">

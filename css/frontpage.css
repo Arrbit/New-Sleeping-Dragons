@@ -210,3 +210,12 @@
         transform: translate(0,5px)
     }
   }
+
+  /* FP Content */
+  .frontpage_content {
+    margin-top: 50px;
+  }
+  .fp_img img{
+    width: 100%;
+    aspect-ratio: auto;
+  }

@@ -49,7 +49,8 @@
     </div>
 
     <div class="frontpage_content container d-flex flex-column">
-
+        
+    <!-- Group Pic -->
         <div class="fp_img">
             <img
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg"
@@ -57,10 +58,14 @@
                 <div class="today"> Click me! </div> 
         </div>
 
-        <div class="fp_news d-flex flex-row justify-content-center font--righteous">
-            <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>
+    <!-- Widget -->
+        <div class="fp_news member_card  font--righteous">
+            <div class="card card_container flex-row d-flex justify-content-center">
+                <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>
+            </div>
         </div>
 
+    <!-- Newest Letter & Member -->
         <div class="fp_new_collection d-flex flex-column flex-lg-row justify-content-center font--righteous">
             <div>Our Newest Letter: 
             <?php custom_frontpage_letter_query(); ?>
@@ -68,9 +73,10 @@
 
             <div>Our Newest Member: 
             <?php custom_frontpage_member_query(); ?>
-            </div> 
+            </div>
         </div>
-            
+
+    <!-- Content -->        
         <div class="fp_content"> 
             <?php echo get_the_content(); ?>
         </div> 

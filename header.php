@@ -8,7 +8,7 @@
 </head>
 
 <!-- SM Header-->
-<header id="sm-header" class="d-flex d-md-none appbar">
+<header class="d-flex d-md-none appbar">
     <a href="/"><img class="appbar_mobile_button"
             src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_White.png" class="logo"
             alt="SDS-Logo"></a>
@@ -19,7 +19,7 @@
 </header>
 
 <!-- MD Header-->
-<header id="md_header" class="wrap d-md-flex d-none">
+<header class="wrap d-md-flex d-none">
 
     <div class="title-container flexible font--righteous">
         <a href="/"><?php echo get_bloginfo()?></a>
@@ -40,20 +40,14 @@
 <div class="container">
 
 <style>
-
-/* Big DIVs */
-.logo {
-    height: 110px !important;
+/* Color */
+a {
+    color: #3e3e3e;
+    text-decoration: none;
 }
 
-.wrap {
-    position: relative;
-    text-align: center;
-    margin: 20px;
-}
-
-.flexible {
-    flex: 1 1 0px;
+a:hover {
+    color: black;
 }
 
 /* -----------SM Setup----------- */
@@ -67,58 +61,36 @@
 }
 
 .appbar_menu li {
-    padding-right: unset !important;
-    flex: 1 1 0px;
+    padding-right: 5px !important;
 }
 
 .appbar_menu a {
     display: flex;
-    flex: auto;
-    align-items: center;
-    justify-content: center;
     padding: 5px;
     border: 1px solid #D0D0D0;
-    text-align: center;
-    text-decoration: none;
 }
 
-.appbar {
-    max-height: 12vh;
-}
-
+/* SM Logo (Clickable) */
 .appbar_mobile_button {
     width: auto;
     min-height: 40px;
     max-height: 110px;
 }
 
-/* Title */
-.title-container {
-    position: relative;
-    display: inline-flex;
-    padding-left: 35%;
-    padding-right: 35%;
-    padding-top: 100px;
-    margin-bottom: 1%;
-    font-size: 1.5em;
-}
-/* Color */
-
-a {
-    color: #3e3e3e;
-    text-decoration: none;
-}
-
-a:hover {
-    color: black;
-    text-decoration: none;
-}
-
 /* -----------MD Setup----------- */
+/* Big DIVs */
+.wrap {
+    position: relative;
+    text-align: center;
+    margin: 20px;
+}
+
+.flexible {
+    flex: 1 1 0px;
+}
 /* Nav Menu */
 .nav-menu-container li {
     display: inline;
-    list-style: none;
     padding-right: 20px;
 }
 
@@ -127,19 +99,15 @@ a:hover {
     /* Logo */
     .logo-container {
         position: relative;
-        opacity: 100%;
-        margin-top: 0;
-        padding: 0;
+    }
+
+    .logo {
+        height: 110px;
     }
 
     /* Title */
     .title-container {
-        position: relative;
-        transform: translate(0, 0);
-        font-size: 150%;
-        padding: 0;
-        left: 0;
-        margin: 0;
+        font-size: 1.5em;
     }
 
     /* Horizontal Line */
@@ -148,7 +116,6 @@ a:hover {
         transform: translateY(-50%);
         content: '';
         top: 50%;
-        left: 0;
         border-top: 1px solid black;
         background: black;
         width: 100%;

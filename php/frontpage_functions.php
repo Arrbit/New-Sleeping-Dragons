@@ -2,7 +2,7 @@
 
     function custom_frontpage_event_exist($loop){
         if( ($loop->have_posts()) ) {   // Do we have a post, in our loop?
-            ?> Next Event <?php
+            ?> Not Empty <?php
             }
         else{
             ?> <?php
@@ -10,7 +10,85 @@
     }
 
 
-    function custom_frontpage_event_query(){ //Checks for Events, and takes the closest to today
+
+    function custom_frontpage_event_query(){
+        $exist = array(
+            'orderby' => array(
+                'is-soon' => 'ASC',
+                'time-hh' => 'ASC',
+                'time-mm' => 'ASC',
+            ),
+            'orderby'           => 'meta_value',
+            'order'             => 'ASC',
+            'post_type'        => 'form_events', // the post type 
+            'post_status' => 'publish',
+            'posts_per_page'=>1,
+            'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
+                'is-soon' => array(
+                    'key' => 'date', 
+                    'value' => date("Y-m-d"), 
+                    'compare' => '>',
+                    'type' => 'DATE'
+                    ),
+                'time-hh' => array(
+                'key' => 'hh', 
+                ),
+                'time-mm' => array(
+                'key' => 'mm', 
+                ),
+            ),
+        );
+        $eloop = new WP_Query( $exist );
+
+        $args = array(
+            'orderby' => array(
+                'time-hh' => 'ASC',
+                'time-mm' => 'ASC',
+            ),
+            'order'       => 'DESC',
+            'post_type'   => 'form_events',
+            'post_status' => 'publish',
+             'meta_query' => array( 
+                'istoday' => array(
+                'key' => 'date', 
+                'value' => date("Y-m-d"), 
+                'compare' => '==',
+                'type' => 'DATE'
+                ),
+                'time-hh' => array(
+                'key' => 'hh', 
+                ),
+                'time-mm' => array(
+                'key' => 'mm', 
+                ),
+             ),
+         );
+         $loop = new WP_Query( $args );
+
+             
+        if ($loop->have_posts()){
+            while ( $loop->have_posts() ) : $loop->the_post();
+
+            custom_frontpage_event(); 
+
+         endwhile; 
+        }elseif ($eloop->have_posts()){
+            while ( $eloop->have_posts() ) : $eloop->the_post();
+
+            custom_frontpage_event(); 
+
+         endwhile; 
+
+        }else{
+        }
+
+        wp_reset_query(); 
+        
+    }
+
+
+    function custom_frontpage_event_query_asd(){ 
+
         $args = array(
             'meta_key'          => 'date',
             'orderby'           => 'meta_value',
@@ -66,6 +144,7 @@
         </a>       
     <?php
     }
+    
 
     function custom_frontpage_card(){ ?>
         <a class="d-flex" href="<?php the_permalink();?>">

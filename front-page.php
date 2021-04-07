@@ -80,7 +80,7 @@
             <?php custom_frontpage_member_query(); ?>
             </div>
         </div>
-
+        <?php custom_frontpage_event_today() ?>
     <!-- Content -->        
         <div class="fp_content"> 
             <?php echo get_the_content(); ?>
@@ -114,30 +114,3 @@ var images = [
 </script>
 
 
-<?php
-//  $args = array(
-//             'orderby' => array(
-//                 'time-hh' => 'ASC',
-//                 'time-mm' => 'ASC',
-//             ),
-//             'order'             => 'DESC',
-//             'post_type'        => 'form_events', // the post type 
-//             'post_status' => 'publish',
-//             'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
-//                 'istoday' =>array(
-//                 'key' => 'date', // Check the start date field
-//                 'value' => date("Y-m-d"), // Set today's date (note the similar format)
-//                 'compare' => '==', // Return the ones greater than today's date
-//                 'type' => 'DATE' // Let WordPress know we're working with date
-//                 ),
-
-//                 'time-hh' =>array(
-//                 'key' => 'hh', 
-//                 ),
-//                 'time-mm' =>array(
-//                 'key' => 'mm', 
-//                 ),
-//             ),
-//         );
-
-        ?>

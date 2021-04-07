@@ -179,8 +179,12 @@
   }
 
   .fp_img img{
-      
     width: 100%;
+  }
+  .fp_img {
+    position: relative;
+    text-align: center;
+    color: white;
   }
 
   /* .fp_news{

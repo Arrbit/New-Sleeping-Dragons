@@ -156,6 +156,12 @@
 .frontpage_event_author{
     transform: translate(-10px, -196px);
 }
+
+.fp_img {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
 /* Arrow Thingy  */
 
 .updown {
@@ -177,6 +183,7 @@
     margin-top: 70px;
   }
   .fp_img img{
+      
     width: 100%;
   }
 

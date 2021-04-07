@@ -99,6 +99,7 @@ padding: 2em;
     position: absolute;
     top: 5px;
     left: 10px;
+    pointer-events: none; 
     color: white;
     font-family: 'Righteous';
     font-size: 2em;

@@ -75,6 +75,7 @@ function create_posttype() {
             'rewrite' => array('slug' => 'letter'),
             'public' => true,
             'hierarchical' => true,
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
             'has_archive' => true,
             'show_in_rest' => true,
             'publicly_queryable' => true
@@ -87,6 +88,7 @@ function create_posttype() {
                 'singular_name' => __( 'Member' )
             ),
             'public' => true,
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail'),
             'has_archive' => true,
             'rewrite' => array('slug' => 'members'),
             'show_in_rest' => true,

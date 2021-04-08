@@ -161,7 +161,7 @@
     margin-top: 70px;
 }
     .frontpage_content .member_card {
-        max-width:fit-content;
+        max-width:100%;
     }
 
     .fp_news_text{

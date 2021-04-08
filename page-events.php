@@ -106,5 +106,5 @@
 
 <style>
     .widget_event_card{
-        max-width: 70% !important;
+        max-width: 100% !important;
     }

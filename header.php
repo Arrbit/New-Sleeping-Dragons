@@ -90,7 +90,9 @@ a:hover {
 }
 /* Nav Menu */
 .nav-menu-container {
-    margin-top: 10px;
+    margin:auto;
+    padding-bottom: 0.25em;
+    font-size:1.3em;
 }
 
 .nav-menu-container li {
@@ -111,7 +113,9 @@ a:hover {
 
     /* Title */
     .title-container {
-        font-size: 1.5em;
+        font-size: 2em;
+        margin:auto;
+        padding-bottom: 1em;
     }
 
     /* Horizontal Line */

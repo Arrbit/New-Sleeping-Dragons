@@ -6,7 +6,7 @@
  */?>
 <?php include_once "php/frontpage_functions.php";?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html class="font--firasans" <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -16,8 +16,8 @@
 
 <?php custom_frontpage_shapes(); ?>
 
-<div> <!-- Header div, without the container, do not close -->
-    <div class="frontpage_eyecatcher d-flex flex-nowrap flex-column flex-lg-row">
+<div class="d-flex flex-column"> <!-- Header div, without the container, do not close -->
+    <div class="frontpage_eyecatcher ce_index d-flex flex-nowrap flex-column flex-lg-row">
 
         <div class="logo align-self-center">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_Transparent.png"
@@ -34,7 +34,8 @@
                 <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
             </div>
 
-            <div class="frontpage_card_collection card_collection">
+            <div class="ce_container ce_index">
+                <div>Next Event</div>
                 <?php custom_frontpage_event_query(); ?>
             </div>
         </div>

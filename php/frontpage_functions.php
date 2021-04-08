@@ -120,25 +120,27 @@
 
     function custom_frontpage_event(){ ?>
 
-        <a class="d-flex" href="<?php the_permalink();?>">
-            <div class="frontpage_card frontpage_card_container card card_container flex-row d-flex">
-                <?php if ( has_post_thumbnail() ) : ?>
-                    <?php the_post_thumbnail('medium'); ?>
-                <?php else : ?>
-                    <img width="300" height="169" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy">
-                <?php endif; ?>
-                <?php if (date('Y-m-d') == date('Y-m-d', strtotime(get_post_meta(get_the_ID(), 'date', TRUE)))) {?> <div class="today"> Today </div> <?php } ?>
-
-                <div class="frontpage_index_content index_content">
-                    <div class="frontpage_card_title card_title event_title font--righteous">
+        <a href="<?php the_permalink();?>">
+            <div class="ce_border ce_border_radius ce_color ce_shadow d-flex flex-md-row flex-column">
+                <div class="ce_img">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <?php the_post_thumbnail('medium'); ?>
+                    <?php else : ?>
+                        <img width="300" height="169" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy">
+                    <?php endif; ?>
+                    <?php if (date('Y-m-d') == date('Y-m-d', strtotime(get_post_meta(get_the_ID(), 'date', TRUE)))) {?> <div class="today"> Today </div> <?php } ?>
+                </div>
+                <div class="ce_content d-flex flex-column">
+                    <div class="ce_title font--righteous">
                         <?php the_title(); ?>
                     </div>
-                    <div class="frontpage_card_time card_time">
+                    <div class="ce_time">
                         <?php echo get_post_meta(get_the_ID(), 'hh', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'mm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d.m.Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
                     </div>
-
-                    <?php echo substr(get_the_excerpt(), 0,100)." […]";?>
-                    <div class="event_author frontpage_event_author"> by <?php echo get_post_meta(get_the_ID(), 'your_name', TRUE);?> <?php echo get_post_meta(get_the_ID(), 'host', TRUE);?> </div>
+                    <div class="ce_desc">
+                        <?php echo substr(get_the_excerpt(), 0,150)." […]";?>
+                    </div>
+                    <div class="ce_host"> by <?php echo get_post_meta(get_the_ID(), 'your_name', TRUE);?> <?php echo get_post_meta(get_the_ID(), 'host', TRUE);?> </div>
                 </div>
             </div>
         </a>       

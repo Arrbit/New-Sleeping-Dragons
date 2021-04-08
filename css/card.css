@@ -105,7 +105,9 @@ padding: 2em;
 }
 
 .event_author{
-    float:right;
+    position: absolute;
+    right:5px;
+    bottom:0px;
     font-weight: 500;
 }
 

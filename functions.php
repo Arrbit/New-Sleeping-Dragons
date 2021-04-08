@@ -42,6 +42,15 @@ function widget_init() {
         'after_title' => '',
       ));
 
+      register_sidebar(
+        array(
+          'name' => 'Event Navigation',
+          'before_widget' => '<div class="widgetNews card card_container">',
+          'after_widget' => '</div>',
+          'before_title' => '<div class="card_title">',
+          'after_title' => '</div>',
+        ));
+
     register_sidebar(
       array(
         'name' => 'Frontpage News',

@@ -137,8 +137,8 @@
                         <?php echo get_post_meta(get_the_ID(), 'hh', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'mm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d.m.Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
                     </div>
 
-                    <?php echo substr(get_the_excerpt(), 0,300)." […]";?>
-                    <div class="event_author frontpage_event_author"> by <?php echo get_post_meta(get_the_ID(), 'your_name', TRUE);?> </div>
+                    <?php echo substr(get_the_excerpt(), 0,100)." […]";?>
+                    <div class="event_author frontpage_event_author"> by <?php echo get_post_meta(get_the_ID(), 'your_name', TRUE);?> <?php echo get_post_meta(get_the_ID(), 'host', TRUE);?> </div>
                 </div>
             </div>
         </a>       

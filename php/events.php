@@ -20,6 +20,7 @@ function c_event_card(){ ?>
                     <?php echo get_post_meta(get_the_ID(), 'hh', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'mm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d/m/Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
                 </div>
                     <?php echo get_the_excerpt(); ?>
+                    <div class="event_author"> by <?php echo get_post_meta(get_the_ID(), 'host', TRUE); echo get_post_meta(get_the_ID(), 'your_name', TRUE);?> </div>
             </div>
         </div>
     </a>

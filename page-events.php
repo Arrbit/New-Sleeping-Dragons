@@ -95,12 +95,16 @@
     <?php wp_reset_query(); ?>
 
     </div> <!-- next_weeks_events_card -->
-</div> <!-- card_collection -->
-
-<div class="fp_news member_card  font--righteous">
-    <div class="d-flex flex-column flex-lg-row card_collection" style="margin-bottom:20px">
-        <?php if ( dynamic_sidebar('Event Navigation') ) : else : endif; ?>
+    <!-- card_collection -->
+    <div class="widget_event_card member_card  font--righteous">
+        <div class="d-flex flex-column flex-lg-row card_collection" style="margin-bottom:20px">
+            <?php if ( dynamic_sidebar('Event Navigation') ) : else : endif; ?>
+        </div>
     </div>
-</div>
 
 <?php get_footer();?>
+
+<style>
+    .widget_event_card{
+        max-width: 70% !important;
+    }

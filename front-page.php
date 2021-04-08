@@ -53,7 +53,7 @@
 
         <!-- Widget -->
         <div class="fp_news_text card_title font--firasans">News</div>
-        <div class="fp_news member_card  font--righteous">
+        <div class="member_card  font--righteous">
             <div class="d-flex flex-column flex-lg-row card_collection" style="margin-bottom:20px">
                 <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>
             </div>

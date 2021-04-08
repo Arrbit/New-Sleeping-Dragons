@@ -89,6 +89,10 @@ a:hover {
     flex: 1 1 0px;
 }
 /* Nav Menu */
+.nav-menu-container {
+    margin-top: 10px;
+}
+
 .nav-menu-container li {
     display: inline;
     padding-right: 20px;

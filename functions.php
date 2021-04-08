@@ -45,7 +45,7 @@ function widget_init() {
       register_sidebar(
         array(
           'name' => 'Event Navigation',
-          'before_widget' => '<div class="widgetNews card card_container">',
+          'before_widget' => '<div class="widgetNews card card_container flex-column-reverse">',
           'after_widget' => '</div>',
           'before_title' => '<div class="card_title">',
           'after_title' => '</div>',
@@ -54,7 +54,7 @@ function widget_init() {
     register_sidebar(
       array(
         'name' => 'Frontpage News',
-        'before_widget' => '<div class="widgetNews card card_container">',
+        'before_widget' => '<div class="widgetNews card card_container flex-column-reverse">',
         'after_widget' => '</div>',
         'before_title' => '<div class="card_title">',
         'after_title' => '</div>',

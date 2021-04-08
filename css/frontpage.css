@@ -60,6 +60,7 @@
     .frontpage_center{
         flex-grow:1;
         margin-top: 15%;
+        max-width:100%;
     }
         .frontpage-title{
             z-index: 1;
@@ -175,16 +176,10 @@
 
     .widgetNews {
         color:#3E3E3E;
-        padding-bottom: 41px;
     }
     .widgetNews:hover{
         color:black;
     }
-        .widgetNews .card_title{
-            position:absolute;
-            bottom:0;
-            left:0;
-        }
 
     .fp_img_text{
         align-self: center;

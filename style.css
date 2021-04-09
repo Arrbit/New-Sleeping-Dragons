@@ -28,20 +28,31 @@ Version: 0.1
   font-family: FiraSans;
 }
 
-.color--black-accent {
-  color: #3e3e3e;
-}
-
 .super-round {
   border-radius: 1em;
 }
 
-.slight-shadow-hover {
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
+.slight-shadow{
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
 }
 
-.slight-shadow-hover:hover {
-  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.6);
+.slight-shadow:hover {
+  box-shadow: 0px 8px 16px 0 rgba(0 0 0 / 20%);
+}
+
+.custom-widget {
+  color: #3e3e3e;
+}
+
+.custom-widget:hover {
+  color: black;
+}
+
+.high-zindex{
+  z-index: 1;
+}
+.low-zindex{
+  z-index: 0;
 }
 
 body {

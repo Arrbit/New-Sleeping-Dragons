@@ -46,7 +46,7 @@ function widget_init() {
       register_sidebar(
         array(
           'name' => 'Event Navigation',
-          'before_widget' => '<div class="widgetNews card card_container flex-column-reverse">',
+          'before_widget' => '<div class="custom-widget card slight-shadow card_container flex-column-reverse">',
           'after_widget' => '</div>',
           'before_title' => '<div class="card_title">',
           'after_title' => '</div>',
@@ -55,7 +55,7 @@ function widget_init() {
     register_sidebar(
       array(
         'name' => 'Frontpage News',
-        'before_widget' => '<div class="widgetNews card card_container flex-column-reverse">',
+        'before_widget' => '<div class="custom-widget card slight-shadow card_container flex-column-reverse">',
         'after_widget' => '</div>',
         'before_title' => '<div class="card_title">',
         'after_title' => '</div>',
@@ -132,7 +132,7 @@ function more_post_ajax(){
       $out .= 
       '<a class="member_card" href='.get_the_permalink().'>
 
-      <div class="card card_container flex-column d-flex">
+      <div class="card card_container slight-shadow flex-column d-flex">
       <div class="card_img member_card_img">
       '.(has_post_thumbnail() ? get_the_post_thumbnail() : '
       <img sizes="(max-width: 768px) 100vw, 768px"  width="768" height="432" loading="lazy" 

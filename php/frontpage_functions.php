@@ -121,7 +121,7 @@
     function custom_frontpage_event(){ ?>
 
         <a href="<?php the_permalink();?>">
-            <div class="ce_border ce_border_radius ce_color ce_shadow d-flex flex-md-row flex-column">
+            <div class="ce_border ce_border_radius ce_color slight-shadow d-flex flex-md-row flex-column">
                 <div class="ce_img">
                     <?php if ( has_post_thumbnail() ) : ?>
                         <?php the_post_thumbnail('medium'); ?>
@@ -150,14 +150,14 @@
 
     function custom_frontpage_card(){ ?>
         <a class="d-flex" href="<?php the_permalink();?>">
-            <div class="frontpage_card frontpage_card_container card card_container flex-row d-flex">
+            <div class="card card_container slight-shadow flex-row d-flex">
                 <?php if ( has_post_thumbnail() ) : ?>
                     <?php the_post_thumbnail('medium'); ?>
                 <?php else : ?>
                     <img width="300" height="169" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" loading="lazy">
                 <?php endif; ?>
-                <div class="frontpage_index_content index_content">
-                    <div class="frontpage_card_title card_title event_title font--righteous">
+                <div class="index_content">
+                    <div class=" card_title event_title font--righteous">
                         <?php the_title(); ?>
                     </div>
                     <?php the_content();?>
@@ -169,7 +169,7 @@
  
     function custom_fp_card(){ ?>
         <a class="member_card" href="<?php the_permalink();?>">
-            <div class="card card_container flex-column d-flex">
+            <div class="card card_container slight-shadow flex-column d-flex">
                 <div class="card_img member_card_img top-round">
                     <?php if ( has_post_thumbnail() ) : ?>
                     <?php the_post_thumbnail('medium_large'); ?>
@@ -222,10 +222,10 @@
     }
 
     function custom_frontpage_shapes(){ ?>
-    <div id="redTriangle"></div>
-    <div id="blackTriangle"></div>
-    <div id="triangleHider"></div>
-    <div id="greyTriangle"></div>
+    <div id="redTriangle" class="low-zindex"></div>
+    <div id="blackTriangle" class="low-zindex"></div>
+    <div id="triangleHider" class="low-zindex"></div>
+    <div id="greyTriangle" class="low-zindex"></div>
     <?php
     }
 ?>

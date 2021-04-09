@@ -36,7 +36,7 @@ wp_localize_script( 'core-js', 'ajax_posts', array(
     while ($loop->have_posts()) : $loop->the_post();?>
 
     <a class="member_card" href="<?php the_permalink();?>">
-        <div class="card card_container flex-column d-flex">
+        <div class="card card_container slight-shadow flex-column d-flex">
             <div class="card_img member_card_img top-round">
                 <?php if ( has_post_thumbnail() ) : ?>
                 <?php the_post_thumbnail('medium_large'); ?>

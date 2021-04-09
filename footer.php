@@ -15,6 +15,9 @@
 <?php wp_footer();?>
 
 <style>
+.color--black-accent{
+    color: #3e3e3e;
+}
 #menu-footer{
     margin-top: auto;
     margin-bottom: auto;
@@ -23,11 +26,6 @@
     list-style:none;
     display: inline;
     padding-right:20px;
-}
-
-.color--black-accent{
-    color: #3e3e3e;
-
 }
 
 .background-color--silver-accent{

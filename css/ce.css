@@ -33,13 +33,6 @@
     background-color: white;
 }
 
-.ce_shadow{
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-}
-
-.ce_shadow:hover{
-    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
-}
 @media (min-width: 768px){
     .ce_border_radius img{
         border-top-right-radius: unset;
@@ -51,10 +44,6 @@
         margin: 0px;
         margin-top: 100px;
     }
-}
-
-.ce_index{
-    z-index:1;
 }
 
 .ce_content{

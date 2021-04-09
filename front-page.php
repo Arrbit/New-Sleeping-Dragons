@@ -17,7 +17,7 @@
 <?php custom_frontpage_shapes(); ?>
 
 <div class="d-flex flex-column"> <!-- Header div, without the container, do not close -->
-    <div class="frontpage_eyecatcher ce_index d-flex flex-nowrap flex-column flex-lg-row">
+    <div class="frontpage_eyecatcher high-zindex d-flex flex-nowrap flex-column flex-lg-row">
 
         <div class="logo align-self-center">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_Transparent.png"
@@ -34,14 +34,14 @@
                 <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
             </div>
 
-            <div class="ce_container ce_index">
+            <div class="ce_container">
                 <div>Next Event</div>
                 <?php custom_frontpage_event_query(); ?>
             </div>
         </div>
     </div>
 
-    <div class="eyecatcher_footer d-flex flex-column">
+    <div class="eyecatcher_footer high-zindex d-flex flex-column">
         <div class="fp_img_text font--firasans">A Phoenix-based FC.</div>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down updown"
             viewBox="0 0 16 16">
@@ -54,14 +54,14 @@
 
         <!-- Widget -->
         <div class="fp_news_text card_title font--firasans">News</div>
-        <div class="member_card  font--righteous">
+        <div class="fp_news font--righteous">
             <div class="d-flex flex-column flex-lg-row card_collection" style="margin-bottom:20px">
                 <?php if ( dynamic_sidebar('Frontpage News') ) : else : endif; ?>
             </div>
         </div>
 
     <!-- Group Pic -->
-        <div class="fp_img super-round slight-shadow-hover">
+        <div class="fp_img super-round slight-shadow">
             <img
                 src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company.jpg"
                 alt="SDS-GroupPic" class="super-round" id="groupPic" onclick="changeImage()"/>

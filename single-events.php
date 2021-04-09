@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post();?><!-- loop just for pagination-->
-<div class="card card_container flex-column d-flex super-round">
+<div class="card card_container slight-shadow flex-column d-flex super-round">
     <?php if ( has_post_thumbnail() ) : ?>
         <div class="card_img member_card_img top-round">
         <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>

@@ -5,7 +5,7 @@
  */ ?>
 <?php get_header();?>
 
-<div class="card card_container flex-column d-flex super-round">
+<div class="card card_container slight-shadow flex-column d-flex super-round">
 <div class="card_img member_card_img">
 <img sizes="(max-width: 768px) 100vw, 768px"  width="768" height="432"   loading="lazy" 
                          class="attachment-medium_large size-medium_large wp-post-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/404.png">

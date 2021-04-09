@@ -96,7 +96,7 @@
 
     </div> <!-- next_weeks_events_card -->
     <!-- card_collection -->
-    <div class="widget_event_card member_card  font--righteous">
+    <div class="widget_event_card member_card font--righteous">
         <div class="d-flex flex-column flex-lg-row card_collection" style="margin-bottom:20px">
             <?php if ( dynamic_sidebar('Event Navigation') ) : else : endif; ?>
         </div>

@@ -1,6 +1,5 @@
 /* Shapes */
 #greyTriangle {
-    z-index: 0;
     width: 0;
     height: 0;
     border-style: solid;
@@ -13,18 +12,16 @@
 }
 
 #redTriangle {
-    z-index: 0;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 30vw 80vh 0 40vh;
+    border-width: 200px 500px 0 160px;
     border-color: #8A0707 transparent transparent;
     position: absolute;
     right: calc(4% - 1vw);
 }
 
 #blackTriangle {
-    z-index: 0;
     width: 0;
     height: 0;
     border-style: solid;
@@ -36,9 +33,8 @@
 }
 
 #triangleHider {
-    z-index: 0;
     width: 30vw;
-    height: 50vh;
+    height: 1000px;
     right: 0;
     top: 50%;
     position: absolute;
@@ -52,6 +48,7 @@
 
 /* Logo */
 .logo img {
+    margin-top: 25px;
     height: auto;
     max-height: 50vh;
     max-width: 30vw;
@@ -62,12 +59,12 @@
 /* Center -> Title, Menu, Event Display */
 .frontpage_center {
     flex-grow: 1;
-    margin-top: 15%;
+    margin-top: 0px;
     max-width: 100%;
 }
 
-.frontpage-title {
-    z-index: 1;
+.frontpage_title{
+    align-self:center;
 }
 
 .frontpage_menu {
@@ -102,49 +99,7 @@
     color: #8a0707;
 }
 
-/* Event Display */
-.frontpage_card_collection {
-    padding-bottom: 10px;
-    margin-top: 10%;
-}
 
-.next_event {
-    font-size: 1.2em;
-}
-
-.frontpage_card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    max-width: 800px;
-}
-
-.frontpage_card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.frontpage_index_content {
-    padding: 0.5em !important;
-    overflow-y: hidden;
-    font-size: 1em;
-    font-family: 'FiraSans' !important;
-}
-
-.frontpage_card_title {
-    margin-top: 0;
-    margin-bottom: 1em;
-    font-size: 1.1em;
-}
-
-.frontpage_card_time {
-    margin-bottom: .5em !important;
-    font-size: 1em;
-}
-
-.frontpage_event_author {
-    padding-top: 20px;
-}
 
 /* Eyecatcher Footer */
 .eyecatcher_footer {
@@ -175,29 +130,24 @@
 
 /* FP Content */
 .frontpage_content {
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
-.frontpage_content .member_card {
-    max-width: 100%;
+.frontpage_content .fp_news .card_title {
+    margin-bottom: unset;
+}
+.frontpage_content .fp_news .card img{
+    width: auto;
+    height: 100% !important;
 }
 
 .fp_news_text {
     align-self: center;
     width: fit-content;
-    margin-top: 60px;
     margin-bottom: 0px;
     padding-right: 0 !important;
     border: 0;
     font-size: 2em;
-}
-
-.widgetNews {
-    color: #3E3E3E;
-}
-
-.widgetNews:hover {
-    color: black;
 }
 
 .fp_img_text {
@@ -233,7 +183,6 @@
 
 @media (min-width:992px) {
     #greyTriangle {
-        z-index: 0;
         width: 0;
         height: 0;
         border-style: solid;
@@ -246,7 +195,6 @@
     }
 
     #redTriangle {
-        z-index: 0;
         width: 0;
         height: 0;
         border-style: solid;
@@ -258,7 +206,6 @@
     }
 
     #blackTriangle {
-        z-index: 0;
         width: 0;
         height: 0;
         border-style: solid;
@@ -270,12 +217,17 @@
     }
 
     #triangleHider {
-        z-index: 0;
         width: 30vw;
-        height: 50vh;
+        height: 1000px;
         right: 0;
         top: 50%;
         position: absolute;
         background-color: white;
+    }
+    .frontpage_center{
+        margin-top: 15%;;
+    }
+    .frontpage_title{
+        align-self:unset;
     }
 }

@@ -1,7 +1,7 @@
 <?php
 function c_event_card(){ ?>
     <a class="d-flex" href="<?php the_permalink();?>">
-        <div class="ce_border ce_border_radius ce_color slight-shadow d-flex flex-md-row flex-column">
+        <div class="ce_border ce_border_radius ce_color slight-shadow d-flex flex-lg-row flex-column">
             <div class="ce_img">
             <?php if ( has_post_thumbnail() ) : ?>
                     <?php the_post_thumbnail('medium_large'); ?>

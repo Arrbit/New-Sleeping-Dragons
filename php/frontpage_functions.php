@@ -121,7 +121,7 @@
     function custom_frontpage_event(){ ?>
 
         <a href="<?php the_permalink();?>">
-            <div class="ce_border ce_border_radius ce_color slight-shadow d-flex flex-md-row flex-column">
+            <div class="ce_border ce_border_radius ce_color slight-shadow d-flex flex-lg-row flex-column">
                 <div class="ce_img">
                     <?php if ( has_post_thumbnail() ) : ?>
                         <?php the_post_thumbnail('medium'); ?>
@@ -134,7 +134,7 @@
                     <div class="ce_title font--righteous">
                         <?php the_title(); ?>
                     </div>
-                    <div class="ce_time">
+                    <div>
                         <?php echo get_post_meta(get_the_ID(), 'hh', TRUE); ?>:<?php echo get_post_meta(get_the_ID(), 'mm', TRUE); ?>ST on <?php echo date('l', strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?> <?php echo date('d.m.Y',strtotime(get_post_meta(get_the_ID(), 'date', TRUE))); ?>
                     </div>
                     <div class="ce_desc">

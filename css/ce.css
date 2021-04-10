@@ -63,13 +63,12 @@
     width: fit-content;
 }
 .ce_time{
-    font-size: 1em;
+    margin-bottom: 10px;
 }
 
 .ce_desc{
     margin-top: 5px;
     margin-left: 5px;
-    font-size: 1em;
     flex-grow:1;
 }
 

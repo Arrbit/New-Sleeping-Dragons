@@ -56,7 +56,12 @@
     padding-right: 10%;
     width: fit-content;
 }
-
+.ce_title_big{
+    font-size: 1.5em;
+    border-bottom: 3px solid #8A0707;
+    padding-right: 10%;
+    width: fit-content;
+}
 .ce_time{
     font-size: 1em;
 }

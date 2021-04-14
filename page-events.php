@@ -16,13 +16,11 @@
 <div class="card_collection">
     <?php $inaweek = date("Y-m-d", time() + (60 * 60 * 24 * +7) ); ?>
     <?php $args = array(
-            'meta_key'          => 'date',
             'orderby' => array(
-                'meta_query' => 'ASC',
-                'time-hh' => 'ASC',
-                'time-mm' => 'ASC',
+                'date' => 'ASC',
+                'hh-time' => 'ASC',
+                'mm-time' => 'ASC'
             ),
-            'order'             => 'DESC',
             'post_type'        => 'events', // the post type 
             'post_status' => 'publish',
             'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
@@ -38,11 +36,13 @@
                 'compare' => '<', 
                 'type' => 'DATE' 
                 ),
-                'time-hh' =>array(
-                'key' => 'hh', 
+                'mm-time' =>array(
+                    'key' => 'mm', 
+                    'type' => 'numeric' 
                 ),
-                'time-mm' =>array(
-                'key' => 'mm', 
+                'hh-time' =>array(
+                    'key' => 'hh', 
+                    'type' => 'numeric' 
                 ),
             ),
         );
@@ -54,9 +54,11 @@
 
     <?php
     $args = array(
-        'meta_key'          => 'date',
-        'orderby'           => 'meta_value',
-        'order'             => 'ASC',
+        'orderby' => array(
+            'date' => 'ASC',
+            'hh-time' => 'ASC',
+            'mm-time' => 'ASC'
+        ),
         'post_type'        => 'events', // the post type 
         'post_status' => 'publish',
         'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
@@ -71,7 +73,15 @@
             'value' => $inaweek, // Set today's date (note the similar format)
             'compare' => '>=', // Return the ones greater than today's date
             'type' => 'DATE' // Let WordPress know we're working with date
-            )
+            ),
+            'mm-time' =>array(
+                'key' => 'mm', 
+                'type' => 'numeric' 
+            ),
+            'hh-time' =>array(
+                'key' => 'hh', 
+                'type' => 'numeric' 
+            ),
         ),
     );
 

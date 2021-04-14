@@ -2,7 +2,7 @@
 <!--closing of the container -->
 
 <footer>
-    <div class="p-2 d-flex background-color--silver-accent font--firasans">
+    <div class="p-2 d-flex background-color--silver-accent font--firasans d-flex flex-column flex-lg-row">
         <div class="flex-fill justify-content-start align-self-center">
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
         </div>
@@ -20,7 +20,7 @@
 }
 #menu-footer{
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: 10px;
 }
 #menu-footer > li {
     list-style:none;
@@ -40,5 +40,17 @@ a {
 a:hover {
     color: black;
     text-decoration: none;
+}
+.footer{
+    text-align: center;
+}
+@media (min-width:992px) {
+    .footer{
+        text-align: justify;
+    }
+    #menu-footer{
+    margin-top: auto;
+    margin-bottom: auto;
+}
 }
 </style>

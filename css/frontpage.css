@@ -103,7 +103,7 @@
 
 /* Eyecatcher Footer */
 .eyecatcher_footer {
-    margin: auto;
+    margin: 30px auto auto auto;
     width: 90%;
 }
 
@@ -138,7 +138,7 @@
 }
 .frontpage_content .fp_news .card img{
     width: auto;
-    height: 100% !important;
+    height: unset !important;
 }
 
 .fp_news_text {
@@ -178,6 +178,7 @@
 
 .fp_content {
     margin-top: 30px;
+    text-align: justify;
 }
 
 
@@ -230,4 +231,9 @@
     .frontpage_title{
         align-self:unset;
     }
+
+    .eyecatcher_footer {
+        margin: auto;
+    }
+    
 }

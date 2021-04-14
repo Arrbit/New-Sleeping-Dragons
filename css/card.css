@@ -100,10 +100,9 @@ padding: 2em;
 }
 
 .event_author{
-    position: absolute;
-    right:5px;
-    bottom:0px;
-    font-weight: 500;
+        font-weight: 500;
+        align-self: flex-end;
+
 }
 
 /* Bootstrap MD Breakpoint */

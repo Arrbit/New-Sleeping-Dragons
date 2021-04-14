@@ -11,7 +11,7 @@
         </div>
     <?php endif; ?>
 
-    <div class="index_content">
+    <div class="index_content d-flex flex-column font--firasans">
         <div class="card_title event_title font--righteous">
             <?php the_title(); ?>
         </div>

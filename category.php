@@ -31,7 +31,7 @@
                     <?php endif; ?>
                 </div>
                     
-                <div class="card_content">
+                <div class="card_content font--firasans">
                     <div class="card_title font--righteous">
                             <?php the_title(); ?>
                     </div>

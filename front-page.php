@@ -17,7 +17,7 @@
 <?php custom_frontpage_shapes(); ?>
 
 <div class="d-flex flex-column"> <!-- Header div, without the container, do not close -->
-    <div class="frontpage_eyecatcher high-zindex d-flex flex-nowrap flex-column flex-lg-row">
+    <div class="frontpage_eyecatcher high-zindex d-flex flex-nowrap flex-column flex-lg-row font--firasans">
 
         <div class="logo align-self-center">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/VectorRed_Transparent.png"
@@ -82,7 +82,7 @@
             </div>
         </div>
     <!-- Content -->        
-        <div class="fp_content"> 
+        <div class="fp_content font--firasans"> 
             <?php echo get_the_content(); ?>
         </div> 
 

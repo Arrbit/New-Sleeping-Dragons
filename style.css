@@ -21,11 +21,11 @@ Version: 0.1
 }
 
 .font--righteous {
-  font-family: Righteous;
+  font-family: Righteous !important;
 }
 
 .font--firasans {
-  font-family: FiraSans;
+  font-family: FiraSans !important;
 }
 
 .super-round {

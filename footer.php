@@ -2,7 +2,7 @@
 <!--closing of the container -->
 
 <footer>
-    <div class="p-2 d-flex background-color--silver-accent">
+    <div class="p-2 d-flex background-color--silver-accent font--firasans">
         <div class="flex-fill justify-content-start align-self-center">
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
         </div>

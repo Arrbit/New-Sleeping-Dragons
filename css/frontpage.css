@@ -133,14 +133,6 @@
     margin-top: 30px;
 }
 
-.frontpage_content .fp_news .card_title {
-    margin-bottom: unset;
-}
-.frontpage_content .fp_news .card img{
-    width: auto;
-    height: unset !important;
-}
-
 .fp_news_text {
     align-self: center;
     width: fit-content;
@@ -231,9 +223,7 @@
     .frontpage_title{
         align-self:unset;
     }
-
     .eyecatcher_footer {
         margin: auto;
     }
-    
 }

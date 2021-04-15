@@ -1,7 +1,7 @@
 <?php
 function c_event_card(){ ?>
     <a class="d-flex" href="<?php the_permalink();?>">
-        <div class="card top-round card_container flex-sm-column flex-md-row d-flex">
+        <div class="card side-round card_container flex-sm-column flex-md-row d-flex">
             <div class="card_img">
             <?php if ( has_post_thumbnail() ) : ?>
                     <?php the_post_thumbnail('medium_large'); ?>

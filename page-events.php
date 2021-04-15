@@ -111,7 +111,7 @@
             <?php if ( dynamic_sidebar('Event Navigation') ) : else : endif; ?>
         </div>
     </div>
-
+</div>
 <?php get_footer();?>
 
 <style>

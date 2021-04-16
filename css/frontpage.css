@@ -111,6 +111,10 @@
     margin: auto;
 }
 
+.eyecatcher_footer_text {
+    align-self: center;
+}
+
 /* Arrow */
 .updown {
     animation: MoveUpDown 1s linear infinite;

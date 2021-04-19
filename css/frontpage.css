@@ -111,6 +111,10 @@
     margin: auto;
 }
 
+.eyecatcher_footer_text {
+    align-self: center;
+}
+
 /* Arrow */
 .updown {
     animation: MoveUpDown 1s linear infinite;
@@ -131,14 +135,6 @@
 /* FP Content */
 .frontpage_content {
     margin-top: 30px;
-}
-
-.frontpage_content .fp_news .card_title {
-    margin-bottom: unset;
-}
-.frontpage_content .fp_news .card img{
-    width: auto;
-    height: unset !important;
 }
 
 .fp_news_text {
@@ -231,9 +227,7 @@
     .frontpage_title{
         align-self:unset;
     }
-
     .eyecatcher_footer {
         margin: auto;
     }
-    
 }

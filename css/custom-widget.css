@@ -1,0 +1,27 @@
+.custom-widget .card_title {
+    margin-bottom: unset;
+    padding-left: 4px;
+}
+
+.custom-widget {
+    height: fit-content;
+    width: 100%;
+}
+.custom-widget a{
+    aspect-ratio: auto 300 / 169;
+    overflow: hidden;
+    position:relative;
+    }
+
+.custom-widget img{
+    width: 100%;
+    height: unset !important;
+    position:absolute;
+    bottom:0;
+}
+
+@media (min-width:992px) {
+    .custom-widget {
+        width: 50%;
+    }
+}

@@ -55,6 +55,20 @@ Version: 0.1
   z-index: 0;
 }
 
+.top-round img {
+  border-radius: 5px 5px 0 0;
+}
+.top-round a {
+  border-radius: 5px 5px 0 0;
+}
+.side-round img{
+  border-radius: 5px 5px 0 0;
+}
+@media (min-width: 768px) {
+  .side-round img {
+    border-radius: 5px 0 0 5px;
+  }
+} 
 body {
   height: 100vh;
   margin: 0;
